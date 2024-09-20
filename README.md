@@ -47,14 +47,14 @@ Currently, I’m actively working on honing my skills in **artificial intelligen
 
 ### 1. **QA Dashboard for Hupp Aerospace and Defense**
 - Automated data workflows by integrating **BI**, **CRM**, and **ERP** systems, reducing operational risk by 75%.
-- Designed a **QA Dashboard** that improved product quality visibility by 25%, empowering leadership to make data-driven decisions.
+- Designed a **QA Dashboard** that improved product quality visibility by **25%**, empowering leadership to make data-driven decisions.
 
 ### 2. **EV Charging Station Placement Optimization**
-- Collaborated with **SAS Institute** to optimize **EV charging station locations**, enhancing precision by 15%.
+- Collaborated with **SAS Institute** to optimize **EV charging station locations**, enhancing precision by **15%**.
 - Utilized **spatial optimization techniques** to ensure the most efficient and sustainable placement of stations.
 
 ### 3. **Financial Analysis of McDonald's Franchise**
-- Conducted a thorough financial analysis of a McDonald's franchise, identifying strategies to boost net margins by 10%.
+- Conducted a thorough financial analysis of a McDonald's franchise, identifying strategies to boost net margins by **10%**.
 - Developed an advanced financial model to forecast startup costs, operational expenses, and profitability.
 
 ### 4. **Supply Chain Optimization**
@@ -75,7 +75,8 @@ I am driven by the potential of **AI** and **machine learning** to revolutionize
 
 Feel free to reach out for collaboration, job opportunities, or simply to chat about AI, data science, or industrial engineering:
 
-- 📧 **Email**: shamsad.rahman.purdue@gmail.com | rahman69@purdue.edu
+- 📧 **Email**: shamsad.rahman.purdue@gmail.com
+- rahman69@purdue.edu
 - 💼 **LinkedIn**: [linkedin.com/in/shamsadr](https://linkedin.com/in/shamsadr)
 - 💻 **GitHub**: [github.com/shamsadr](https://github.com/shamsadr)
 
