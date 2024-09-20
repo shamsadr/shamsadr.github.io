@@ -1,6 +1,7 @@
 # Basic Settings
 title: "Shamsad Rahman"
-email: "shamsad.rahman.purdue@gmail.com"
+logo: Assets/img/Headshot1.jpg
+#email: "shamsad.rahman.purdue@gmail.com"
 description: "Industrial Engineer | ML/AI Enthusiast | Data Analyst | Passionate about Transforming Data into Actionable Insights"
 baseurl: "/"
 url: "https://shamsadr.github.io"  # Update this with your GitHub Pages URL
