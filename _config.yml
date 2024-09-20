@@ -1,6 +1,6 @@
 # Basic Settings
 title: "Shamsad Rahman"
-logo: Assets/Headshot1.jpg
+logo: Assets/Headshot1.png
 include:
   - Assets/css/style.css 
 #email: "shamsad.rahman.purdue@gmail.com"
