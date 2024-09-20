@@ -1,7 +1,7 @@
-/* Apply circular style to the logo */
-img[src*="/Assets/Headshot1.jpg"] {
+/* Apply a red border for debugging */
+img[src="/Assets/Headshot1.jpg"] {
   border-radius: 50%;
-  width: 150px;  /* Adjust as needed */
-  height: 150px; /* Adjust as needed */
+  width: 150px;
+  height: 150px;
+  border: 5px solid red; /* Add a red border to confirm the style is applied */
 }
-
