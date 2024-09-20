@@ -2,18 +2,13 @@
 
 Welcome to my personal portfolio, a space where I showcase my journey, skills, and projects in **Industrial Engineering**, **Machine Learning**, and **Data Science**. I’m passionate about solving real-world problems through data-driven insights and optimization techniques.
 
-## 🌐 Live Website
-Explore the live version of my portfolio here: [Shamsad's Portfolio](https://shamsadr.github.io)
-
----
-
 ## 🔍 About This Website
 This portfolio is designed using **GitHub Pages** and powered by **Jekyll**. It provides a comprehensive overview of my academic journey, professional experience, and personal projects.
 
 ### Key Features:
 - **Home**: A snapshot of who I am, my professional summary, and what drives me.
-- **About**: My background is in Industrial Engineering, economics, and growing expertise in ML/AI and data analytics.
-- **Portfolio**: A collection of the projects I’ve worked on, including operations research analysis, machine learning models, and case studies in financial analysis and risk management.
+- **About**: My background is in Industrial Engineering, Statistical Learning, and growing expertise in ML/AI and data analytics.
+- **Portfolio**: A collection of the projects I’ve worked on, including operations research analysis, machine learning models, and case studies in financial analysis and improving operational efficiency.
 
 ---
 
@@ -46,6 +41,7 @@ I’m actively working on honing my skills in **artificial intelligence**, **dat
 ## 📁 Featured Projects
 
 ### 1. **QA Dashboard for Hupp Aerospace and Defense**
+-Collaborated with my team to integrate data from disparate **BI Systems** including **Tableau**, **Wrike (CRM)**, and **Quantum (ERP)** to enable leadership to make **data-driven decisions** and drive **Operational Efficiency**.
 - Automated data workflows by integrating **BI**, **CRM**, and **ERP** systems, reducing operational risk by **75%**.
 - Designed a **QA Dashboard** that improved product quality visibility by **25%**, empowering leadership to make data-driven decisions.
 
@@ -58,7 +54,7 @@ I’m actively working on honing my skills in **artificial intelligence**, **dat
 - Developed an advanced financial model to forecast startup costs, operational expenses, and profitability.
 
 ### 4. **Supply Chain Optimization**
-- Worked on improving supply chain efficiencies and analyzing profitability across regions using **SCData.ai** tools, with a focus on metrics like **Operating Margin** and **ROA**.
+- Worked on improving supply chain efficiencies and analyzing profitability across regions using **SCData.ai** tools, focusing on metrics like **Operating Margin** and **ROA**.
 
 ---
 
@@ -79,5 +75,3 @@ Feel free to reach out for collaboration, job opportunities, or simply to chat a
 - 📧 **Email**: [rahman69@purdue.edu](mailto:rahman69@purdue.edu)
 - 💼 **LinkedIn**: [linkedin.com/in/shamsadr](https://linkedin.com/in/shamsadr)
 - 💻 **GitHub**: [github.com/shamsadr](https://github.com/shamsadr)
-
-
