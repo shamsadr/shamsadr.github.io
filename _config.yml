@@ -1,8 +1,8 @@
 # Basic Settings
 title: "Shamsad Rahman"
 logo: Assets/Headshot1.jpg
-#include:
-  #- assets/css/style.css 
+include:
+  - Assets/css/style.css 
 #email: "shamsad.rahman.purdue@gmail.com"
 description: "Industrial Engineer | ML/AI Enthusiast | Data Analyst | Passionate about Transforming Data into Actionable Insights"
 baseurl: "/"
