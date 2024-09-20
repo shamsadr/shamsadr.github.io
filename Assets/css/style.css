@@ -1,5 +1,5 @@
-.logo {
-  border-radius: 50%; /* Makes the image circular */
-  width: 150px; /* Set width to whatever size you prefer */
-  height: 150px; /* Set height to the same as the width for a perfect circle */
+img[src*="/assets/img/Headshot1.jpg"] {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
