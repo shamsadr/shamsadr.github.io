@@ -80,13 +80,4 @@ Feel free to reach out for collaboration, job opportunities, or simply to chat a
 - 💼 **LinkedIn**: [linkedin.com/in/shamsadr](https://linkedin.com/in/shamsadr)
 - 💻 **GitHub**: [github.com/shamsadr](https://github.com/shamsadr)
 
----
-
-## ⚙️ Repository Setup
-
-If you'd like to explore the code and setup the site locally:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/shamsadr/portfolio.git
 
