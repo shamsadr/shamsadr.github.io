@@ -1,0 +1,95 @@
+# Basic Settings
+title: "Shamsad Rahman"
+email: "shamsad.rahman.purdue@gmail.com"
+description: "Industrial Engineer | ML/AI Enthusiast | Data Analyst | Passionate about Transforming Data into Actionable Insights"
+baseurl: "/"
+url: "https://shamsadr.github.io"  # Update this with your GitHub Pages URL
+
+# Social Media and Contact Information
+author:
+  name: "Shamsad Rahman"
+  email: "shamsad.rahman.purdue@gmail.com"
+  location: "Sandy, Utah"
+  linkedin: "https://linkedin.com/in/shamsadr"
+  github: "https://github.com/shamsadr"
+  
+# Professional and Academic Background
+profession: 
+  title: "Industrial Engineer | Data Scientist | Operations Research Analyst"
+  summary: |
+    As a recent graduate from Purdue University with a B.S. in Industrial Engineering, I am deeply passionate about using data-driven methodologies to solve real-world problems. 
+    With a growing expertise in machine learning, artificial intelligence, and analytics, I thrive in environments where data is the key to innovation and strategic decision-making.
+
+education:
+  university: "Purdue University"
+  degree: "Bachelor of Science in Industrial Engineering"
+  graduation_date: "May 2024"
+  key_courses:
+    - "Production Planning"
+    - "Machine Learning"
+    - "Financial Modeling"
+    - "Supply Chain Management"
+    - "Operations Research"
+  certifications:
+    - "Optimization Concepts for Data Science and Artificial Intelligence - SAS"
+
+# Experience Section
+experience:
+  - company: "Hupp Aerospace and Defense"
+    position: "Systems Analyst"
+    date: "Jan 2024 - May 2024"
+    description: |
+      - Automated data workflows through BI, CRM, and ERP integration, reducing operational risk and improving data accuracy by 75%.
+      - Engineered a comprehensive QA dashboard, increasing product quality visibility by 25%, enabling data-backed decisions by leadership.
+  - company: "SAS Institute X Purdue VIP"
+    position: "Operations Research Analyst"
+    date: "Jan 2023 - May 2023"
+    description: |
+      - Enhanced the precision of EV charging station placement by 15% through spatial optimization and data modeling techniques.
+      - Leveraged data envelopment analysis to generate risk-adjusted insights, providing valuable input for strategic planning.
+
+# Skills Section
+skills:
+  programming_languages: 
+    - "Python"
+    - "R"
+    - "C/C++"
+    - "JavaScript"
+    - "SQL"
+  technologies_frameworks:
+    - "Pandas"
+    - "NumPy"
+    - "MATLAB"
+    - "Simulink"
+    - "SAS"
+    - "Minitab"
+  analytics_and_tools:
+    - "Data Visualization"
+    - "Optimization Models"
+    - "Machine Learning Algorithms"
+    - "Predictive Analytics"
+
+# Interests and Future Aspirations
+interests:
+  - "Machine Learning and Artificial Intelligence"
+  - "Operations Research"
+  - "Data Science"
+  - "Predictive Modeling"
+  - "Supply Chain Optimization"
+
+future_goals: |
+  I am driven by the challenge of transforming raw data into meaningful insights, with a focus on ML/AI to revolutionize industries. 
+  My goal is to continually sharpen my skills in machine learning and analytics to contribute to projects that harness data for innovative solutions.
+
+# Portfolio/Projects Section
+portfolio:
+  - name: "Financial Analysis of McDonald’s Franchise"
+    description: "Performed sensitivity analysis to evaluate investment scenarios, identifying strategies to boost net margins by 10%."
+  - name: "EV Charging Station Placement"
+    description: "Enhanced precision in charging station placement using spatial optimization techniques, improving efficiency by 15%."
+  - name: "QA Dashboard Development"
+    description: "Developed a comprehensive QA dashboard, improving product quality visibility by 25% for a leading defense company."
+
+# Additional Configurations
+theme: "minimal"
+markdown: "kramdown"
