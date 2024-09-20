@@ -75,8 +75,8 @@ I am driven by the potential of **AI** and **machine learning** to revolutionize
 
 Feel free to reach out for collaboration, job opportunities, or simply to chat about AI, data science, or industrial engineering:
 
-- 📧 **Email**: shamsad.rahman.purdue@gmail.com
-- rahman69@purdue.edu
+- 📧 **Email**: [shamsad.rahman.purdue@gmail.com](mailto:shamsad.rahman.purdue@gmail.com)
+- 📧 **Email**: [rahman69@purdue.edu](mailto:rahman69@purdue.edu)
 - 💼 **LinkedIn**: [linkedin.com/in/shamsadr](https://linkedin.com/in/shamsadr)
 - 💻 **GitHub**: [github.com/shamsadr](https://github.com/shamsadr)
 
