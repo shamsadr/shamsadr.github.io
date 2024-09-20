@@ -1,5 +1,7 @@
+/* Apply circular style to the logo */
 img[src*="/Assets/Headshot1.jpg"] {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 150px;  /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
 }
+
