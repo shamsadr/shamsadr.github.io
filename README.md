@@ -8,19 +8,19 @@ Explore the live version of my portfolio here: [Shamsad's Portfolio](https://sha
 ---
 
 ## 🔍 About This Website
-This portfolio is designed using **GitHub Pages** and powered by **Jekyll**. It is a comprehensive overview of my academic journey, professional experience, and personal projects.
+This portfolio is designed using **GitHub Pages** and powered by **Jekyll**. It provides a comprehensive overview of my academic journey, professional experience, and personal projects.
 
 ### Key Features:
 - **Home**: A snapshot of who I am, my professional summary, and what drives me.
-- **About**: My background in Industrial Engineering, economics, and growing expertise in ML/AI and data analytics.
-- **Portfolio**: A collection of the projects that I’ve worked on, including operations research analysis, machine learning models, and case studies in financial analysis and risk management.
+- **About**: My background is in Industrial Engineering, economics, and growing expertise in ML/AI and data analytics.
+- **Portfolio**: A collection of the projects I’ve worked on, including operations research analysis, machine learning models, and case studies in financial analysis and risk management.
 
 ---
 
 ## 👨‍💼 About Me
 I graduated with a **Bachelor of Science in Industrial Engineering** from **Purdue University**, where I developed a strong foundation in **production planning**, **operations research**, and **machine learning**. My technical proficiency spans across multiple programming languages, including **Python**, **R**, and **SQL**, alongside advanced skills in **data modeling** and **predictive analytics**.
 
-Currently, I’m actively working on honing my skills in **artificial intelligence** and **data-driven decision-making**. I have experience automating workflows, building optimization models, and applying machine learning algorithms to solve business problems.
+I’m actively working on honing my skills in **artificial intelligence**, **data science**, and **data-driven decision-making**. I have experience automating workflows, building optimization models, and applying machine learning algorithms to solve business problems.
 
 ---
 
@@ -46,7 +46,7 @@ Currently, I’m actively working on honing my skills in **artificial intelligen
 ## 📁 Featured Projects
 
 ### 1. **QA Dashboard for Hupp Aerospace and Defense**
-- Automated data workflows by integrating **BI**, **CRM**, and **ERP** systems, reducing operational risk by 75%.
+- Automated data workflows by integrating **BI**, **CRM**, and **ERP** systems, reducing operational risk by **75%**.
 - Designed a **QA Dashboard** that improved product quality visibility by **25%**, empowering leadership to make data-driven decisions.
 
 ### 2. **EV Charging Station Placement Optimization**
@@ -63,7 +63,7 @@ Currently, I’m actively working on honing my skills in **artificial intelligen
 ---
 
 ## 💡 Future Goals & Aspirations
-I am driven by the potential of **AI** and **machine learning** to revolutionize industries, especially in the areas of **operations research**, **supply chain management**, and **financial analytics**. My immediate goal is to delve deeper into predictive modeling and AI systems to create smarter, more efficient solutions for businesses.
+I am driven by the potential of **AI** and **machine learning** to revolutionize industries, especially in the areas of **operations research**, **supply chain management**, and **financial analytics**. My immediate goal is to delve deeper into predictive modeling and AI systems to create smarter, more efficient business solutions.
 
 - Expand my portfolio with more ML-driven projects.
 - Continue learning through advanced certifications in AI and data science.
