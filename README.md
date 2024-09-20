@@ -41,7 +41,7 @@ I’m actively working on honing my skills in **artificial intelligence**, **dat
 ## 📁 Featured Projects
 
 ### 1. **QA Dashboard for Hupp Aerospace and Defense**
--Collaborated with my team to integrate data from disparate **BI Systems** including **Tableau**, **Wrike (CRM)**, and **Quantum (ERP)** to enable leadership to make **data-driven decisions** and drive **Operational Efficiency**.
+- For my **Senior Designing Project (Industrial Engineering)**, collaborated with my team to integrate data from disparate **BI Systems** including **Tableau**, **Wrike (CRM)**, and **Quantum (ERP)** to enable leadership to make **data-driven decisions** and drive **operational efficiency**.
 - Automated data workflows by integrating **BI**, **CRM**, and **ERP** systems, reducing operational risk by **75%**.
 - Designed a **QA Dashboard** that improved product quality visibility by **25%**, empowering leadership to make data-driven decisions.
 
