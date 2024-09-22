@@ -2,6 +2,9 @@
 
 Welcome to my personal portfolio, a space where I showcase my journey, skills, and projects in **Industrial Engineering**, **Machine Learning**, and **Data Science**. I’m passionate about solving real-world problems through data-driven insights and optimization techniques.
 
+## 🌐 Live Website
+Explore the live version of my portfolio here: [Shamsad's Portfolio](https://shamsadr.github.io)
+
 ## 🔍 About This Website
 This portfolio is designed using **GitHub Pages** and powered by **Jekyll**. It provides a comprehensive overview of my academic journey, professional experience, and personal projects.
 
