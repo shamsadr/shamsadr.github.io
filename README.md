@@ -8,7 +8,7 @@ Tempe, AZ &nbsp;|&nbsp; [srahma20@asu.edu](mailto:srahma20@asu.edu) &nbsp;|&nbsp
 
 ## Summary
 
-Industrial Engineering graduate and MSIE candidate at Arizona State University. Specialized in revenue optimization, business intelligence, and autonomous systems. Proven track record leveraging SQL, Python, and R to improve forecast accuracy by 15% and automate aerospace data workflows by 50%.
+Purdue Industrial Engineering graduate and MSIE candidate at Arizona State University. Specialized in revenue optimization, business intelligence, and autonomous systems. Proven track record leveraging SQL, Python, and R to improve forecast accuracy by 15% and automate aerospace data workflows by 50%.
 
 ---
 
@@ -42,13 +42,13 @@ Bachelor of Science in Industrial Engineering · *Aug 2019 – May 2024*
 
 ## Projects
 
-### Autonomous AI Agent (Langflow) · *Sep 2024 – Nov 2024*
-- Engineered a ReAct and Reflection-based AI agent using Langflow to manage complex, multi-step contextual queries.
-- Implemented iterative error analysis to refine agent performance and response accuracy.
-
 ### Monte Carlo Simulation Suite · [Repo](https://github.com/shamsadr/monte-carlo-sim) | [Live Page](https://shamsadr.github.io/monte-carlo-sim)
 - Built two Monte Carlo simulations from scratch using NumPy and Matplotlib — Pi estimation via random sampling and stock price paths via Geometric Brownian Motion.
 - Simulated mean final price matched the analytical expectation within **0.16%** across 50,000 paths.
+  
+### Autonomous AI Agent (Langflow) · *Sep 2024 – Nov 2024*
+- Engineered a ReAct and Reflection-based AI agent using Langflow to manage complex, multi-step contextual queries.
+- Implemented iterative error analysis to refine agent performance and response accuracy.
 
 ### EV Charging Station Placement — Purdue VIP (ORSOL) · *Jan 2023 – May 2023*
 - Optimized EV charging station placement using SAS and Data Envelopment Analysis (DEA).
