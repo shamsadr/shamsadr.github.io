@@ -1,101 +1,102 @@
 # Basic Settings
 title: "Shamsad Rahman"
 logo: Assets/Headshot1.png
-include:
-  - Assets/css/style.css 
-#email: "shamsad.rahman.purdue@gmail.com"
-description: "Industrial Engineer | ML/AI Enthusiast | Data Analyst | Passionate about Transforming Data into Actionable Insights"
+description: "MSIE Candidate at ASU · Industrial Engineer · Data Scientist · Operations Research Analyst"
 baseurl: "/"
-url: "https://shamsadr.github.io"  # Update this with your GitHub Pages URL
+url: "https://shamsadr.github.io"
 
-# Social Media and Contact Information
+# Author
 author:
   name: "Shamsad Rahman"
-  email: "shamsad.rahman.purdue@gmail.com"
-  location: "Sandy, Utah"
+  email: "srahma20@asu.edu"
+  phone: "+1-765-631-0481"
+  location: "Tempe, AZ"
   linkedin: "https://linkedin.com/in/shamsadr"
   github: "https://github.com/shamsadr"
-  
-# Professional and Academic Background
-profession: 
-  title: "Industrial Engineer | Data Scientist | Operations Research Analyst"
-  summary: |
-    As a recent graduate from Purdue University with a B.S. in Industrial Engineering, I am deeply passionate about using data-driven methodologies to solve real-world problems. 
-    With a growing expertise in machine learning, artificial intelligence, and analytics, I thrive in environments where data is the key to innovation and strategic decision-making.
 
+# Summary
+summary: |
+  Industrial Engineering graduate and MSIE candidate at Arizona State University.
+  Specialized in revenue optimization, business intelligence, and autonomous systems.
+  Proven track record leveraging SQL, Python, and R to improve forecast accuracy by 15%
+  and automate aerospace data workflows by 50%.
+
+# Education
 education:
-  university: "Purdue University"
-  degree: "Bachelor of Science in Industrial Engineering"
-  graduation_date: "May 2024"
-  key_courses:
-    - "Production Planning"
-    - "Machine Learning"
-    - "Financial Modeling"
-    - "Supply Chain Management"
-    - "Operations Research"
-  certifications:
-    - "Optimization Concepts for Data Science and Artificial Intelligence - SAS"
+  - institution: "Arizona State University"
+    school: "Ira A. Fulton Schools of Engineering"
+    degree: "Master of Science in Industrial Engineering"
+    location: "Tempe, AZ"
+    date: "Expected May 2027"
+  - institution: "Purdue University"
+    school: "Edwardson School of Industrial Engineering"
+    degree: "Bachelor of Science in Industrial Engineering"
+    location: "West Lafayette, IN"
+    date: "Aug 2019 – May 2024"
+    key_courses:
+      - "Production Planning"
+      - "Machine Learning"
+      - "Financial Modeling"
+      - "Supply Chain Management"
+      - "Operations Research"
+    certifications:
+      - "Optimization Concepts for Data Science and Artificial Intelligence - SAS"
 
-# Experience Section
+# Experience
 experience:
+  - company: "Assurance Hospitality Management"
+    position: "Revenue Analyst"
+    date: "Nov 2024 – Jul 2025"
+    location: "Salt Lake City, UT"
+    highlights:
+      - "Developed rolling 30/60/90-day demand forecasts, improving forecast accuracy by 15%."
+      - "Optimized daily pricing and inventory controls, raising RevPAR by 5% and RGI by +2 points."
+      - "Conducted displacement analyses on group RFPs worth $16M to protect yield during peak demand."
   - company: "Hupp Aerospace and Defense"
-    position: "Systems Analyst"
-    date: "Jan 2024 - May 2024"
-    description: |
-      - Automated data workflows through BI, CRM, and ERP integration, reducing operational risk and improving data accuracy by 75%.
-      - Engineered a comprehensive QA dashboard, increasing product quality visibility by 25%, enabling data-backed decisions by leadership.
-  - company: "SAS Institute X Purdue VIP"
-    position: "Operations Research Analyst"
-    date: "Jan 2023 - May 2023"
-    description: |
-      - Enhanced the precision of EV charging station placement by 15% through spatial optimization and data modeling techniques.
-      - Leveraged data envelopment analysis to generate risk-adjusted insights, providing valuable input for strategic planning.
+    position: "Business Intelligence Analyst (Senior Design)"
+    date: "Jan 2024 – May 2024"
+    location: "New Haven, IN"
+    highlights:
+      - "Integrated Quantum ERP, Tableau, and Wrike to automate workflows and reduce manual entry by 50%."
+      - "Built Tableau QA dashboards, increasing product visibility by 25% and cutting overhead by 30%."
+      - "Developed SOPs and training materials to ensure system interoperability."
 
-# Skills Section
+# Skills
 skills:
-  programming_languages: 
+  languages:
     - "Python"
-    - "R"
-    - "C/C++"
-    - "JavaScript"
     - "SQL"
-  technologies_frameworks:
-    - "Pandas"
-    - "NumPy"
-    - "MATLAB"
-    - "Simulink"
+    - "R"
     - "SAS"
-    - "Minitab"
-  analytics_and_tools:
-    - "Data Visualization"
-    - "Optimization Models"
-    - "Machine Learning Algorithms"
-    - "Predictive Analytics"
+    - "JavaScript"
+  bi_visualization:
+    - "Tableau"
+    - "Power BI"
+    - "Excel (Advanced)"
+  ai_automation:
+    - "Langflow"
+    - "AI Agent Architectures"
+  methodologies:
+    - "Operations Research"
+    - "Demand Forecasting"
+    - "Stochastic Modeling"
+    - "Data Envelopment Analysis (DEA)"
+    - "Financial Modeling"
 
-# Interests and Future Aspirations
-interests:
-  - "Machine Learning and Artificial Intelligence"
-  - "Operations Research"
-  - "Data Science"
-  - "Predictive Modeling"
-  - "Supply Chain Optimization"
-
-future_goals: |
-  I am driven by the challenge of transforming raw data into meaningful insights, with a focus on ML/AI to revolutionize industries. 
-  My goal is to continually sharpen my skills in machine learning and analytics to contribute to projects that harness data for innovative solutions.
-
-# Portfolio/Projects Section
+# Portfolio/Projects
 portfolio:
-  - name: "Financial Analysis of McDonald’s Franchise"
-    description: "Performed sensitivity analysis to evaluate investment scenarios, identifying strategies to boost net margins by 10%."
-  - name: "EV Charging Station Placement"
-    description: "Enhanced precision in charging station placement using spatial optimization techniques, improving efficiency by 15%."
-  - name: "QA Dashboard Development"
-    description: "Developed a comprehensive QA dashboard, improving product quality visibility by 25% for a leading defense company."
+  - name: "Autonomous AI Agent (Langflow)"
+    description: "ReAct and Reflection-based AI agent for complex multi-step contextual queries, with iterative error analysis."
+    date: "Sep 2024 – Nov 2024"
   - name: "Monte Carlo Simulation Suite"
     description: "Pi estimation via random sampling and stock price simulation via Geometric Brownian Motion, built with NumPy and Matplotlib."
     repo: "https://github.com/shamsadr/monte-carlo-sim"
     live: "https://shamsadr.github.io/monte-carlo-sim"
+  - name: "EV Charging Station Placement (Purdue VIP)"
+    description: "Optimized EV charging station placement using SAS and DEA, improving placement precision by 15%."
+    date: "Jan 2023 – May 2023"
+  - name: "QA Dashboard — Hupp Aerospace"
+    description: "Integrated ERP, CRM, and BI systems to build a QA dashboard improving product quality visibility by 25%."
 
 # Additional Configurations
 theme: jekyll-theme-minimal
