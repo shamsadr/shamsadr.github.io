@@ -92,6 +92,10 @@ portfolio:
     description: "Enhanced precision in charging station placement using spatial optimization techniques, improving efficiency by 15%."
   - name: "QA Dashboard Development"
     description: "Developed a comprehensive QA dashboard, improving product quality visibility by 25% for a leading defense company."
+  - name: "Monte Carlo Simulation Suite"
+    description: "Pi estimation via random sampling and stock price simulation via Geometric Brownian Motion, built with NumPy and Matplotlib."
+    repo: "https://github.com/shamsadr/monte-carlo-sim"
+    live: "https://shamsadr.github.io/monte-carlo-sim"
 
 # Additional Configurations
 theme: jekyll-theme-minimal

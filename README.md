@@ -59,6 +59,12 @@ I’m actively working on honing my skills in **artificial intelligence**, **dat
 ### 4. **Supply Chain Optimization**
 - Worked on improving supply chain efficiencies and analyzing profitability across regions using **SCData.ai** tools, focusing on metrics like **Operating Margin** and **ROA**.
 
+### 5. **Monte Carlo Simulation Suite** · [Repo](https://github.com/shamsadr/monte-carlo-sim) | [Live Page](https://shamsadr.github.io/monte-carlo-sim)
+- Built two classic Monte Carlo simulations from scratch using **NumPy** and **Matplotlib** — no ML libraries.
+- **Pi estimation** via random point sampling, with a convergence study across 30 log-spaced sample sizes (100 → 1,000,000).
+- **Stock price simulation** via Geometric Brownian Motion (GBM), generating 500 daily paths over a 1-year horizon with drift μ=8% and volatility σ=20%.
+- Simulated mean final price matched the analytical expectation (`S₀·eᵘᵀ`) within **0.16%** across 50,000 paths.
+
 ---
 
 ## 💡 Future Goals & Aspirations
