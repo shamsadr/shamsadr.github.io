@@ -4,9 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shamsad Rahman — MSIE Candidate & Builder</title>
-  <meta name="description" content="Shamsad Rahman — MSIE Candidate at ASU. Quant enthusiast, builder, and curious mind. Open to Summer 2026 internships." />
+
+  <!-- CHANGED (SEO): meta description rewritten to match “quant-curious”, clearer roles -->
+  <meta name="description"
+        content="Shamsad Rahman — MSIE candidate at ASU (Industrial Engineering). Building analytics, forecasting, and optimization projects; exploring quantitative finance. Open to Summer 2026 internships." />
+
+  <!-- ADDED: theme color for mobile browsers -->
+  <meta name="theme-color" content="#09090b" />
+
+  <!-- ADDED (SEO): canonical + basic social sharing metadata -->
+  <link rel="canonical" href="https://shamsadr.github.io/" />
+  <meta property="og:title" content="Shamsad Rahman — MSIE Candidate & Builder" />
+  <meta property="og:description" content="Building analytics, forecasting, and optimization projects; exploring quantitative finance. Open to Summer 2026 internships." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shamsadr.github.io/" />
+  <!-- Optional but recommended: add an actual image at /og.png -->
+  <!-- <meta property="og:image" content="https://shamsadr.github.io/og.png" /> -->
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Shamsad Rahman — MSIE Candidate & Builder" />
+  <meta name="twitter:description" content="Building analytics, forecasting, and optimization projects; exploring quantitative finance. Open to Summer 2026 internships." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -57,6 +78,29 @@
     .divider {
       height: 1px;
       background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+
+    /* ADDED (A11y): visible on keyboard focus */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+
+    /* ADDED (A11y): skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      padding: .6rem .9rem;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      z-index: 1000;
+    }
+    .skip-link:focus {
+      left: 12px;
     }
 
     /* ── NAV ── */
@@ -137,7 +181,7 @@
     .hero-tag strong { color: var(--text); font-weight: 500; }
     .hero-desc {
       font-size: .975rem; color: var(--text-sec);
-      max-width: 550px; line-height: 1.8; margin-bottom: 2.5rem;
+      max-width: 620px; line-height: 1.8; margin-bottom: 2.5rem;
     }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-p {
@@ -249,9 +293,19 @@
       font-size: .72rem; color: var(--text-muted);
       border: 1px solid var(--border); border-radius: 5px;
       padding: .22rem .55rem;
-      transition: color .2s, border-color .2s;
+      transition: color .2s, border-color .2s, opacity .2s;
+      display: inline-flex;
+      align-items: center;
     }
     .proj-lnk:hover { color: var(--accent-light); border-color: rgba(59,130,246,.4); }
+
+    /* ADDED: “not public yet” chip for private projects */
+    .proj-lnk.disabled {
+      opacity: .55;
+      cursor: not-allowed;
+      border-style: dashed;
+    }
+
     .proj-name { font-weight: 600; font-size: .975rem; margin-bottom: .45rem; }
     .proj-desc { font-size: .855rem; color: var(--text-sec); line-height: 1.75; flex: 1; margin-bottom: 1.2rem; }
     .tags { display: flex; flex-wrap: wrap; gap: .35rem; }
@@ -318,371 +372,429 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- ADDED (A11y): first focusable element -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">S<span>R</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact" class="nav-cta">Contact →</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      Open to Summer 2026 Internships &amp; Co-ops
+  <!-- NAV -->
+  <!-- CHANGED: aria-label + logo points to #hero instead of # -->
+  <nav id="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Go to top">S<span>R</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact →</a></li>
+      </ul>
     </div>
-    <p class="hero-hi">Hi, I'm</p>
-    <h1 class="hero-name">Shamsad Rahman</h1>
-    <p class="hero-tag">
-      <strong>MSIE Candidate @ ASU</strong> &nbsp;·&nbsp;
-      Quant &amp; Finance Enthusiast &nbsp;·&nbsp;
-      Builder
-    </p>
-    <p class="hero-desc">
-      Industrial engineer by training. Curious mind by nature. I'm passionate about quantitative
-      finance, data-driven decision-making, and building products that actually matter.
-      Currently pursuing my master's at ASU while learning everything I can about ML, AI, and markets.
-    </p>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn-p">View My Work →</a>
-      <a href="#contact" class="btn-s">Get in Touch</a>
-    </div>
-  </div>
-</section>
+  </nav>
 
-<div class="divider"></div>
+  <!-- ADDED: wrap main page content -->
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Open to Summer 2026 Internships &amp; Co-ops
+        </div>
+        <p class="hero-hi">Hi, I'm</p>
+        <h1 class="hero-name">Shamsad Rahman</h1>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <span class="label">About Me</span>
-        <h2 class="sec-title">More than a résumé.</h2>
-        <p>
-          I'm an Industrial Engineering graduate from <strong>Purdue University</strong>, currently
-          pursuing an M.S. at <strong>Arizona State University</strong>. But more than any title, I'm
-          someone genuinely obsessed with understanding how things work — from stochastic models to
-          market microstructure.
+        <!-- CHANGED: “enthusiast” -> clear positioning + exploration -->
+        <p class="hero-tag">
+          <strong>MSIE Candidate @ ASU</strong> &nbsp;·&nbsp;
+          Analytics &amp; Optimization &nbsp;·&nbsp;
+          Exploring Quant Finance
         </p>
-        <p>
-          I'm a <strong>big quant and finance nerd</strong>. I find myself reading about derivatives
-          pricing and central bank policy at midnight for fun. I want to work at the intersection of
-          engineering, data, and capital markets.
+
+        <!-- CHANGED: less “vibes”, more proof + honest exploration -->
+        <p class="hero-desc">
+          Industrial engineer by training. Builder by habit. I like turning messy business problems into
+          models, dashboards, and automated workflows. Lately I’ve been exploring quantitative finance
+          through simulation, forecasting, and market-focused side projects.
         </p>
-        <p>
-          I have a <strong>strong entrepreneurial drive</strong>. I want to build companies and products
-          that genuinely benefit people — not just hype. I care about the whole stack: the problem,
-          the product, the business model, the people it serves.
-        </p>
-        <p>
-          I also follow <strong>economics and geopolitics</strong> closely and care about how systems —
-          financial, political, social — shape people's lives. Long term, I want to contribute to
-          solutions that actually help people at scale.
-        </p>
-      </div>
-      <div>
-        <span class="label" style="margin-bottom:1rem; display:block;">When I'm not studying</span>
-        <div class="interests-grid">
-          <div class="int-card">
-            <div class="int-icon">🏎️</div>
-            <div class="int-title">Formula 1</div>
-            <div class="int-desc">Strategy, data, and speed. The original quant sport.</div>
-          </div>
-          <div class="int-card">
-            <div class="int-icon">⌚</div>
-            <div class="int-title">Horology</div>
-            <div class="int-desc">Mechanical watches. Engineering you can wear.</div>
-          </div>
-          <div class="int-card">
-            <div class="int-icon">⚽</div>
-            <div class="int-title">Football</div>
-            <div class="int-desc">The beautiful game. Tactics, data, and passion.</div>
-          </div>
-          <div class="int-card">
-            <div class="int-icon">🌍</div>
-            <div class="int-title">Geopolitics</div>
-            <div class="int-desc">Economics, power, and how the world actually works.</div>
-          </div>
+
+        <!-- CHANGED: added Resume CTA -->
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-p">View My Work →</a>
+          <!-- Put resume.pdf in your repo root (same level as index.html) -->
+          <a href="resume.pdf" class="btn-s">Resume (PDF)</a>
+          <a href="#contact" class="btn-s">Get in Touch</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div class="divider"></div>
+    <div class="divider"></div>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <span class="label">Education</span>
-    <h2 class="sec-title">Academic Background</h2>
-    <p class="sec-sub">Building the foundation for a career at the intersection of engineering, data, and finance.</p>
-    <div class="edu-list">
-      <div class="edu-card">
-        <div class="edu-icon">ASU</div>
-        <div>
-          <div class="edu-school">
-            Arizona State University — Ira A. Fulton Schools of Engineering
-            <span class="chip-cur">Current</span>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="label">About Me</span>
+            <h2 class="sec-title">More than a résumé.</h2>
+
+            <!-- CHANGED: toned down overclaiming, clarified the “quant-curious” story -->
+            <p>
+              I'm an Industrial Engineering graduate from <strong>Purdue University</strong>, currently pursuing an M.S. at
+              <strong>Arizona State University</strong>. I enjoy building practical systems — forecasting, optimization, and
+              analytics — that help people make better decisions.
+            </p>
+
+            <p>
+              I’m <strong>exploring quantitative finance</strong> (not claiming mastery). I’m using projects as a way to build intuition:
+              stochastic modeling, simulation, and the “how do you test this honestly?” loop that comes with data work.
+            </p>
+
+            <p>
+              I have a <strong>strong entrepreneurial drive</strong>. I care about the whole stack: the problem, the product,
+              the business model, and the people it serves.
+            </p>
+
+            <p>
+              Outside of work, I follow <strong>economics and geopolitics</strong> and like thinking about how incentives and systems
+              shape outcomes at scale.
+            </p>
           </div>
-          <div class="edu-degree">Master of Science in Industrial Engineering</div>
-          <div class="edu-meta">
-            <span>📍 Tempe, AZ</span>
-            <span>🎓 Expected May 2027</span>
-          </div>
-        </div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">PU</div>
-        <div>
-          <div class="edu-school">Purdue University — Edwardson School of Industrial Engineering</div>
-          <div class="edu-degree">Bachelor of Science in Industrial Engineering</div>
-          <div class="edu-meta">
-            <span>📍 West Lafayette, IN</span>
-            <span>🎓 Aug 2019 – May 2024</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<div class="divider"></div>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="container">
-    <span class="label">Experience</span>
-    <h2 class="sec-title">Professional Background</h2>
-    <p class="sec-sub">Applying engineering and analytics to real business problems.</p>
-    <div class="exp-list">
-      <div class="exp-card">
-        <div class="exp-head">
           <div>
-            <div class="exp-company">Assurance Hospitality Management</div>
-            <div class="exp-role">Revenue Analyst</div>
-            <div class="exp-loc">📍 Salt Lake City, UT</div>
+            <span class="label" style="margin-bottom:1rem; display:block;">When I'm not studying</span>
+            <div class="interests-grid">
+              <div class="int-card">
+                <div class="int-icon">🏎️</div>
+                <div class="int-title">Formula 1</div>
+                <div class="int-desc">Strategy, data, and speed.</div>
+              </div>
+              <div class="int-card">
+                <div class="int-icon">⌚</div>
+                <div class="int-title">Horology</div>
+                <div class="int-desc">Mechanical watches. Engineering you can wear.</div>
+              </div>
+              <div class="int-card">
+                <div class="int-icon">⚽</div>
+                <div class="int-title">Football</div>
+                <div class="int-desc">Tactics, data, and passion.</div>
+              </div>
+              <div class="int-card">
+                <div class="int-icon">🌍</div>
+                <div class="int-title">Geopolitics</div>
+                <div class="int-desc">Economics, power, and incentives.</div>
+              </div>
+            </div>
           </div>
-          <div class="exp-date">Nov 2024 – Jul 2025</div>
         </div>
-        <ul class="exp-ul">
-          <li>Developed rolling <strong>30/60/90-day demand forecasts</strong>, improving forecast accuracy by <strong>15%</strong>.</li>
-          <li>Optimized daily pricing and inventory controls, raising <strong>RevPAR by 5%</strong> and improving <strong>RGI by +2 points</strong>.</li>
-          <li>Conducted displacement analyses on group RFPs worth <strong>$16M</strong> to protect yield during peak demand.</li>
-        </ul>
       </div>
-      <div class="exp-card">
-        <div class="exp-head">
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <span class="label">Education</span>
+        <h2 class="sec-title">Academic Background</h2>
+        <p class="sec-sub">Building the foundation for a career at the intersection of engineering, data, and finance.</p>
+        <div class="edu-list">
+          <div class="edu-card">
+            <div class="edu-icon">ASU</div>
+            <div>
+              <div class="edu-school">
+                Arizona State University — Ira A. Fulton Schools of Engineering
+                <span class="chip-cur">Current</span>
+              </div>
+              <div class="edu-degree">Master of Science in Industrial Engineering</div>
+              <div class="edu-meta">
+                <span>📍 Tempe, AZ</span>
+                <span>🎓 Expected May 2027</span>
+              </div>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">PU</div>
+            <div>
+              <div class="edu-school">Purdue University — Edwardson School of Industrial Engineering</div>
+              <div class="edu-degree">Bachelor of Science in Industrial Engineering</div>
+              <div class="edu-meta">
+                <span>📍 West Lafayette, IN</span>
+                <span>🎓 Aug 2019 – May 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <span class="label">Experience</span>
+        <h2 class="sec-title">Professional Background</h2>
+        <p class="sec-sub">Applying engineering and analytics to real business problems.</p>
+        <div class="exp-list">
+          <div class="exp-card">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Assurance Hospitality Management</div>
+                <div class="exp-role">Revenue Analyst</div>
+                <div class="exp-loc">📍 Salt Lake City, UT</div>
+              </div>
+              <div class="exp-date">Nov 2024 – Jul 2025</div>
+            </div>
+            <ul class="exp-ul">
+              <li>Developed rolling <strong>30/60/90-day demand forecasts</strong>, improving forecast accuracy by <strong>15%</strong>.</li>
+              <li>Optimized daily pricing and inventory controls, raising <strong>RevPAR by 5%</strong> and improving <strong>RGI by +2 points</strong>.</li>
+              <li>Conducted displacement analyses on group RFPs worth <strong>$16M</strong> to protect yield during peak demand.</li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Hupp Aerospace and Defense</div>
+                <div class="exp-role">Business Intelligence Analyst — Senior Design</div>
+                <div class="exp-loc">📍 New Haven, IN</div>
+              </div>
+              <div class="exp-date">Jan 2024 – May 2024</div>
+            </div>
+            <ul class="exp-ul">
+              <li>Integrated Quantum ERP, Tableau, and Wrike to automate workflows, reducing manual entry by <strong>50%</strong>.</li>
+              <li>Built Tableau QA dashboards, increasing product visibility by <strong>25%</strong> and cutting overhead by <strong>30%</strong>.</li>
+              <li>Developed SOPs and training materials to ensure system interoperability and reduce onboarding time.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <span class="label">Projects</span>
+        <h2 class="sec-title">Things I've Built</h2>
+        <p class="sec-sub">Personal and academic projects spanning AI, simulation, and data analytics.</p>
+
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-emoji">🤖</span>
+
+              <!-- CHANGED: don’t link to the wrong project; mark as not public (or swap in real URLs) -->
+              <div class="proj-links">
+                <span class="proj-lnk disabled" title="Not public yet">Private</span>
+                <a href="mailto:srahma20@asu.edu?subject=AI%20Agent%20Demo%20Request"
+                   class="proj-lnk"
+                   aria-label="Request a demo of Autonomous AI Agent via email">
+                  Request demo
+                </a>
+              </div>
+            </div>
+
+            <div class="proj-name">Autonomous AI Agent</div>
+            <div class="proj-desc">
+              Built a ReAct + reflection-style agent workflow in Langflow for multi-step queries.
+              Focused on tool-use reliability, iteration, and failure analysis.
+            </div>
+            <div class="tags">
+              <span class="tag">Langflow</span>
+              <span class="tag">AI Agents</span>
+              <span class="tag">ReAct</span>
+              <span class="tag">LLM</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-emoji">📊</span>
+              <div class="proj-links">
+                <!-- CHANGED: added rel="noopener noreferrer" for target=_blank links -->
+                <a href="https://github.com/shamsadr/monte-carlo-sim"
+                   class="proj-lnk"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open repository for Monte Carlo Simulation Suite (new tab)">
+                  Repo
+                </a>
+                <a href="https://shamsadr.github.io/monte-carlo-sim"
+                   class="proj-lnk"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open live demo for Monte Carlo Simulation Suite (new tab)">
+                  Live
+                </a>
+              </div>
+            </div>
+            <div class="proj-name">Monte Carlo Simulation Suite</div>
+            <div class="proj-desc">
+              Pi estimation via random sampling and stock price simulation via Geometric Brownian Motion,
+              built with NumPy and Matplotlib. Simulated mean matched the analytical expectation within
+              0.16% across 50,000 paths.
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Monte Carlo</span>
+              <span class="tag">GBM</span>
+              <span class="tag">Finance</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-emoji">⚡</span>
+              <div class="proj-links">
+                <span class="proj-lnk disabled" title="Write-up available on request">On request</span>
+              </div>
+            </div>
+            <div class="proj-name">EV Charging Station Optimization</div>
+            <div class="proj-desc">
+              Collaborated with SAS Institute via Purdue's VIP program to optimize EV charging
+              station placement using Data Envelopment Analysis. Improved placement precision by 15%
+              by integrating demand and cost factors into simulation models.
+            </div>
+            <div class="tags">
+              <span class="tag">SAS</span>
+              <span class="tag">DEA</span>
+              <span class="tag">Optimization</span>
+              <span class="tag">Simulation</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-emoji">📋</span>
+              <div class="proj-links">
+                <span class="proj-lnk disabled" title="Case details available on request">On request</span>
+              </div>
+            </div>
+            <div class="proj-name">QA Dashboard — Hupp Aerospace</div>
+            <div class="proj-desc">
+              Integrated Quantum ERP, Tableau, and Wrike CRM to build a real-time QA dashboard for
+              an aerospace manufacturer. Improved product quality visibility by 25% and cut reporting
+              overhead by 30%.
+            </div>
+            <div class="tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">ERP</span>
+              <span class="tag">BI</span>
+              <span class="tag">Automation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <span class="label">Skills</span>
+        <h2 class="sec-title">Tools &amp; Technologies</h2>
+        <p class="sec-sub">What I work with day to day.</p>
+        <div class="skills-wrap">
           <div>
-            <div class="exp-company">Hupp Aerospace and Defense</div>
-            <div class="exp-role">Business Intelligence Analyst — Senior Design</div>
-            <div class="exp-loc">📍 New Haven, IN</div>
+            <div class="skill-group-label">Languages</div>
+            <div class="skill-chips">
+              <span class="chip blue">Python</span>
+              <span class="chip blue">SQL</span>
+              <span class="chip">R</span>
+              <span class="chip">SAS</span>
+              <span class="chip">JavaScript</span>
+            </div>
           </div>
-          <div class="exp-date">Jan 2024 – May 2024</div>
-        </div>
-        <ul class="exp-ul">
-          <li>Integrated Quantum ERP, Tableau, and Wrike to automate workflows, reducing manual entry by <strong>50%</strong>.</li>
-          <li>Built Tableau QA dashboards, increasing product visibility by <strong>25%</strong> and cutting overhead by <strong>30%</strong>.</li>
-          <li>Developed SOPs and training materials to ensure system interoperability and reduce onboarding time.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <span class="label">Projects</span>
-    <h2 class="sec-title">Things I've Built</h2>
-    <p class="sec-sub">Personal and academic projects spanning AI, simulation, and data analytics.</p>
-    <div class="proj-grid">
-
-      <div class="proj-card">
-        <div class="proj-top">
-          <span class="proj-emoji">🤖</span>
-          <div class="proj-links"></div>
-        </div>
-        <div class="proj-name">Autonomous AI Agent</div>
-        <div class="proj-desc">
-          Engineered a ReAct and Reflection-based AI agent using Langflow to handle complex,
-          multi-step contextual queries. Implemented iterative error analysis to continuously
-          refine agent performance and response accuracy.
-        </div>
-        <div class="tags">
-          <span class="tag">Langflow</span>
-          <span class="tag">AI Agents</span>
-          <span class="tag">ReAct</span>
-          <span class="tag">LLM</span>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top">
-          <span class="proj-emoji">📊</span>
-          <div class="proj-links">
-            <a href="https://github.com/shamsadr/monte-carlo-sim" class="proj-lnk" target="_blank">Repo</a>
-            <a href="https://shamsadr.github.io/monte-carlo-sim" class="proj-lnk" target="_blank">Live</a>
+          <div>
+            <div class="skill-group-label">BI &amp; Visualization</div>
+            <div class="skill-chips">
+              <span class="chip blue">Tableau</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">Excel (Advanced)</span>
+              <span class="chip">Matplotlib</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-group-label">AI &amp; Automation</div>
+            <div class="skill-chips">
+              <span class="chip gold">Langflow</span>
+              <span class="chip gold">AI Agent Workflows</span>
+              <span class="chip">NumPy</span>
+              <span class="chip">Pandas</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-group-label">Methodologies</div>
+            <div class="skill-chips">
+              <span class="chip">Operations Research</span>
+              <span class="chip">Demand Forecasting</span>
+              <span class="chip">Stochastic Modeling</span>
+              <span class="chip">Financial Modeling</span>
+              <span class="chip">Monte Carlo Simulation</span>
+              <span class="chip">Data Envelopment Analysis</span>
+            </div>
           </div>
         </div>
-        <div class="proj-name">Monte Carlo Simulation Suite</div>
-        <div class="proj-desc">
-          Pi estimation via random sampling and stock price simulation via Geometric Brownian
-          Motion, built with NumPy and Matplotlib. Simulated mean matched the analytical
-          expectation within 0.16% across 50,000 paths.
-        </div>
-        <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">Monte Carlo</span>
-          <span class="tag">GBM</span>
-          <span class="tag">Finance</span>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <span class="label" style="display:block; text-align:center;">Get In Touch</span>
+          <h2>Let's Talk.</h2>
+
+          <!-- CHANGED: clarified role focus + quant as “exploring” -->
+          <p>
+            I'm actively looking for <strong>Summer 2026 internships and co-ops</strong> in
+            analytics, operations research, product/ops, or data roles. I’m also open to
+            quant/markets opportunities where the work is a good fit as I continue exploring that path.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:srahma20@asu.edu" class="c-link">✉️&nbsp; srahma20@asu.edu</a>
+            <a href="https://linkedin.com/in/shamsadr"
+               class="c-link"
+               target="_blank"
+               rel="noopener noreferrer">
+              💼&nbsp; LinkedIn
+            </a>
+            <a href="https://github.com/shamsadr"
+               class="c-link"
+               target="_blank"
+               rel="noopener noreferrer">
+              🐙&nbsp; GitHub
+            </a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="proj-card">
-        <div class="proj-top">
-          <span class="proj-emoji">⚡</span>
-          <div class="proj-links"></div>
-        </div>
-        <div class="proj-name">EV Charging Station Optimization</div>
-        <div class="proj-desc">
-          Collaborated with SAS Institute via Purdue's VIP program to optimize EV charging
-          station placement using Data Envelopment Analysis. Improved placement precision by 15%
-          by integrating demand and cost factors into simulation models.
-        </div>
-        <div class="tags">
-          <span class="tag">SAS</span>
-          <span class="tag">DEA</span>
-          <span class="tag">Optimization</span>
-          <span class="tag">Simulation</span>
-        </div>
+    <footer>
+      <div class="container">
+        Shamsad Rahman &nbsp;·&nbsp;
+        <a href="https://github.com/shamsadr/shamsadr.github.io"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Source
+        </a>
       </div>
+    </footer>
+  </main>
 
-      <div class="proj-card">
-        <div class="proj-top">
-          <span class="proj-emoji">📋</span>
-          <div class="proj-links"></div>
-        </div>
-        <div class="proj-name">QA Dashboard — Hupp Aerospace</div>
-        <div class="proj-desc">
-          Integrated Quantum ERP, Tableau, and Wrike CRM to build a real-time QA dashboard for
-          an aerospace manufacturer. Improved product quality visibility by 25% and cut reporting
-          overhead by 30%.
-        </div>
-        <div class="tags">
-          <span class="tag">Tableau</span>
-          <span class="tag">ERP</span>
-          <span class="tag">BI</span>
-          <span class="tag">Automation</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <span class="label">Skills</span>
-    <h2 class="sec-title">Tools &amp; Technologies</h2>
-    <p class="sec-sub">What I work with day to day.</p>
-    <div class="skills-wrap">
-      <div>
-        <div class="skill-group-label">Languages</div>
-        <div class="skill-chips">
-          <span class="chip blue">Python</span>
-          <span class="chip blue">SQL</span>
-          <span class="chip">R</span>
-          <span class="chip">SAS</span>
-          <span class="chip">JavaScript</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-label">BI &amp; Visualization</div>
-        <div class="skill-chips">
-          <span class="chip blue">Tableau</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">Excel (Advanced)</span>
-          <span class="chip">Matplotlib</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-label">AI &amp; Automation</div>
-        <div class="skill-chips">
-          <span class="chip gold">Langflow</span>
-          <span class="chip gold">AI Agent Architectures</span>
-          <span class="chip">NumPy</span>
-          <span class="chip">Pandas</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-label">Methodologies</div>
-        <div class="skill-chips">
-          <span class="chip">Operations Research</span>
-          <span class="chip">Demand Forecasting</span>
-          <span class="chip">Stochastic Modeling</span>
-          <span class="chip">Financial Modeling</span>
-          <span class="chip">Monte Carlo Simulation</span>
-          <span class="chip">Data Envelopment Analysis</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-box">
-      <span class="label" style="display:block; text-align:center;">Get In Touch</span>
-      <h2>Let's Talk.</h2>
-      <p>
-        I'm actively looking for <strong>Summer 2026 internships and co-ops</strong> in
-        quant/finance, data analytics, or product/operations roles. If you're building something
-        interesting or have an opportunity that might be a fit — I'd love to hear from you.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:srahma20@asu.edu" class="c-link">✉️&nbsp; srahma20@asu.edu</a>
-        <a href="https://linkedin.com/in/shamsadr" class="c-link" target="_blank">💼&nbsp; LinkedIn</a>
-        <a href="https://github.com/shamsadr" class="c-link" target="_blank">🐙&nbsp; GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    Shamsad Rahman &nbsp;·&nbsp;
-    <a href="https://github.com/shamsadr/shamsadr.github.io">View Source</a>
-  </div>
-</footer>
-
-<script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  });
-</script>
-
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
 </body>
 </html>
