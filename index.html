@@ -213,6 +213,15 @@
       font-family: 'Space Grotesk', sans-serif;
       letter-spacing: .02em;
     }
+
+    .avatar-img{
+      width:56px;height:56px;
+      border-radius:16px;
+      object-fit:cover;
+      border:1px solid rgba(37,99,235,0.18);
+      box-shadow: var(--shadow);
+    }
+    
     .hero-toprow { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
     .hero-toprow .who { color: var(--text-muted); font-size: .9rem; }
 
@@ -443,7 +452,12 @@
         <div class="hero-grid">
           <div>
             <div class="hero-toprow">
-              <div class="avatar" aria-hidden="true">SR</div>
+              <img class="avatar-img"
+               src="Assets/Headshot1.png"
+               alt="Headshot of Shamsad Rahman"
+                 width="56" height="56"
+               loading="eager" decoding="async"
+               fetchpriority="high" />
               <div>
                 <div class="who">MSIE @ ASU · Industrial Engineering</div>
                 <div class="pill-row" style="margin-top:.55rem;">
