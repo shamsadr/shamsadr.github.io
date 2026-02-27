@@ -5,487 +5,529 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shamsad Rahman — MSIE Candidate & Builder</title>
 
-  <!-- CHANGED (SEO): meta description rewritten to match “quant-curious”, clearer roles -->
-  <meta name="description"
-        content="Shamsad Rahman — MSIE candidate at ASU (Industrial Engineering). Building analytics, forecasting, and optimization projects; exploring quantitative finance. Open to Summer 2026 internships." />
-
-  <!-- ADDED: theme color for mobile browsers -->
-  <meta name="theme-color" content="#09090b" />
-
-  <!-- ADDED (SEO): canonical + basic social sharing metadata -->
+  <!-- CHANGED (SEO): shorter + scannable positioning -->
+  <meta name="description" content="Shamsad Rahman — MSIE candidate at ASU. Analytics + optimization builder exploring quant finance. Open to Summer 2026 internships & co-ops." />
   <link rel="canonical" href="https://shamsadr.github.io/" />
+  <meta name="theme-color" content="#f6f7fb" />
+
+  <!-- Social sharing (optional image: add /og.png) -->
   <meta property="og:title" content="Shamsad Rahman — MSIE Candidate & Builder" />
-  <meta property="og:description" content="Building analytics, forecasting, and optimization projects; exploring quantitative finance. Open to Summer 2026 internships." />
+  <meta property="og:description" content="Analytics + optimization builder exploring quant finance. Open to Summer 2026 internships & co-ops." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shamsadr.github.io/" />
-  <!-- Optional but recommended: add an actual image at /og.png -->
   <!-- <meta property="og:image" content="https://shamsadr.github.io/og.png" /> -->
-
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Shamsad Rahman — MSIE Candidate & Builder" />
-  <meta name="twitter:description" content="Building analytics, forecasting, and optimization projects; exploring quantitative finance. Open to Summer 2026 internships." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      background: #09090b;
-      color: #e4e4e7;
+      background: var(--bg);
+      color: var(--text-sec);
       font-family: 'Inter', sans-serif;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     :root {
-      --bg:           #09090b;
-      --bg-card:      #18181b;
-      --bg-card-hover:#1e1e26;
-      --border:       rgba(255,255,255,0.07);
-      --border-hover: rgba(59,130,246,0.45);
-      --text:         #fafafa;
-      --text-muted:   #71717a;
-      --text-sec:     #a1a1aa;
-      --accent:       #3b82f6;
-      --accent-light: #60a5fa;
+      /* CHANGED: LIGHT THEME */
+      --bg:           #f6f7fb;
+      --bg-card:      #ffffff;
+      --bg-soft:      #f1f5ff;
+      --border:       rgba(15,23,42,0.10);
+      --border-hover: rgba(37,99,235,0.35);
+
+      --text:         #0f172a;
+      --text-sec:     #334155;
+      --text-muted:   #64748b;
+
+      --accent:       #2563eb;
+      --accent-2:     #7c3aed;
       --gold:         #f59e0b;
-      --gold-light:   #fbbf24;
-      --radius:       12px;
+
+      --radius:       14px;
       --max:          1080px;
+
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --shadow-2: 0 14px 40px rgba(15, 23, 42, 0.09);
     }
+
     h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; color: var(--text); }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 4.5rem 0; }
+    .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); }
 
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
-    section { padding: 6rem 0; }
-
-    .label {
-      font-size: 0.68rem; font-weight: 600;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 0.6rem;
-      display: block;
-    }
-    .sec-title {
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 700; margin-bottom: 0.4rem;
-    }
-    .sec-sub {
-      color: var(--text-sec); font-size: 0.95rem; margin-bottom: 3rem;
-    }
-    .divider {
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--border), transparent);
-    }
-
-    /* ADDED (A11y): visible on keyboard focus */
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 8px;
-    }
-
-    /* ADDED (A11y): skip link */
+    /* A11y */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 10px; }
     .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 12px;
-      padding: .6rem .9rem;
-      border-radius: 8px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text);
-      z-index: 1000;
+      position: absolute; left: -999px; top: 12px;
+      padding: .6rem .9rem; border-radius: 10px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--text); z-index: 1000;
+      box-shadow: var(--shadow);
     }
-    .skip-link:focus {
-      left: 12px;
+    .skip-link:focus { left: 12px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 1.2rem 0;
-      transition: background .3s, border-bottom .3s;
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      transition: background .25s, box-shadow .25s, border-bottom .25s;
     }
     nav.scrolled {
-      background: rgba(9,9,11,.88);
+      background: rgba(246,247,251,0.82);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 6px 20px rgba(15,23,42,0.05);
     }
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
-      max-width: var(--max); margin: 0 auto; padding: 0 2rem;
+      max-width: var(--max); margin: 0 auto; padding: 0 1.5rem;
     }
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem; font-weight: 700;
-    }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text); }
     .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
-    .nav-links a { font-size: .85rem; color: var(--text-sec); transition: color .2s; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-muted); font-size: .9rem; text-decoration: none; }
     .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      font-size: .85rem !important; font-weight: 500;
+      padding: .38rem .85rem;
+      border-radius: 10px;
+      border: 1px solid rgba(37,99,235,0.25);
+      background: rgba(37,99,235,0.06);
       color: var(--accent) !important;
-      border: 1px solid rgba(59,130,246,.35);
-      padding: .35rem .95rem; border-radius: 6px;
-      transition: background .2s, color .2s !important;
+      font-weight: 600;
+      text-decoration: none;
     }
-    .nav-cta:hover { background: var(--accent) !important; color: #fff !important; }
+    .nav-cta:hover { background: rgba(37,99,235,0.10); }
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh; display: flex; align-items: center;
-      padding: 9rem 0 5rem; position: relative; overflow: hidden;
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
     }
-    #hero::before {
-      content: ''; position: absolute; top: -180px; left: -180px;
-      width: 580px; height: 580px;
-      background: radial-gradient(circle, rgba(59,130,246,.13) 0%, transparent 70%);
-      pointer-events: none;
+
+    /* HERO (infographic layout) */
+    #hero { padding: 7.5rem 0 3.5rem; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 2rem;
+      align-items: start;
     }
-    #hero::after {
-      content: ''; position: absolute; bottom: -80px; right: -80px;
-      width: 420px; height: 420px;
-      background: radial-gradient(circle, rgba(245,158,11,.09) 0%, transparent 70%);
-      pointer-events: none;
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
     }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .78rem; color: var(--text-sec);
-      border: 1px solid var(--border); border-radius: 100px;
-      padding: .28rem .9rem; margin-bottom: 1.6rem;
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.1rem; }
+    .pill {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
       background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: .82rem;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+    }
+    .pill strong { color: var(--text); font-weight: 600; }
+
+    .hero-name {
+      font-size: clamp(2.6rem, 6vw, 4.3rem);
+      line-height: 1.05;
+      margin-bottom: .7rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-sec);
+      margin-bottom: 1.1rem;
+      max-width: 46ch;
+    }
+
+    .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.2rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: .72rem 1.1rem;
+      border-radius: 12px;
+      font-weight: 650;
+      font-size: .95rem;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { box-shadow: var(--shadow-2); text-decoration: none; }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      border-color: rgba(37,99,235,0.25);
+    }
+
+    /* Right-side hero cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card.pad { padding: 1.2rem; }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem;
+    }
+    @media (max-width: 520px) {
+      .mini-grid { grid-template-columns: 1fr; }
+    }
+    .mini {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: .95rem;
+      background: linear-gradient(180deg, #ffffff, #fbfcff);
+    }
+    .mini .k { font-size: .78rem; color: var(--text-muted); margin-bottom: .25rem; }
+    .mini .v { font-weight: 700; color: var(--text); font-family: 'Space Grotesk', sans-serif; }
+    .mini .s { margin-top: .35rem; font-size: .85rem; color: var(--text-sec); }
+
+    .avatar {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(124,58,237,0.10));
+      border: 1px solid rgba(37,99,235,0.18);
+      color: var(--accent);
+      font-weight: 800;
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: .02em;
+    }
+    .hero-toprow { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .hero-toprow .who { color: var(--text-muted); font-size: .9rem; }
+
+    /* SNAPSHOT STATS (big numbers = infographic) */
+    #snapshot { padding-top: 3rem; }
+    .section-head { margin-bottom: 1.4rem; }
+    .label {
+      font-size: 0.72rem; font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .45rem;
+      display: block;
+    }
+    .sec-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom: .4rem; }
+    .sec-sub { color: var(--text-muted); font-size: .95rem; max-width: 70ch; }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .9rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 980px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .stats-grid { grid-template-columns: 1fr; } }
+
+    .stat {
+      padding: 1.05rem 1.1rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+    }
+    .stat .num {
+      font-size: 1.8rem;
+      line-height: 1.1;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .stat .lbl { margin-top: .3rem; color: var(--text-muted); font-size: .86rem; }
+    .stat .note { margin-top: .55rem; color: var(--text-sec); font-size: .9rem; }
+
+    /* STORY: Now / Previously / Next (less prose, more structure) */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 950px) { .story-grid { grid-template-columns: 1fr; } }
+
+    .story-card { padding: 1.2rem; }
+    .story-title {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: .75rem;
+    }
+    .story-title h3 { font-size: 1.1rem; }
+    .chip {
+      display: inline-flex; align-items: center;
+      padding: .22rem .55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--text-muted);
+      font-size: .78rem;
+      font-weight: 650;
+    }
+    .bullets { list-style: none; display: grid; gap: .5rem; }
+    .bullets li {
+      display: grid; grid-template-columns: 20px 1fr;
+      gap: .55rem;
+      align-items: start;
+      color: var(--text-sec);
+      font-size: .95rem;
+      line-height: 1.45;
     }
     .dot {
-      width: 7px; height: 7px; background: #22c55e;
-      border-radius: 50%; animation: blink 2s infinite;
-    }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
-
-    .hero-hi { font-size: 1rem; color: var(--text-sec); margin-bottom: .4rem; }
-    .hero-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      font-weight: 700; line-height: 1.04;
-      background: linear-gradient(130deg, #fff 0%, var(--accent-light) 45%, var(--gold-light) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; margin-bottom: 1rem;
-    }
-    .hero-tag {
-      font-size: clamp(.95rem, 2vw, 1.2rem);
-      color: var(--text-sec); margin-bottom: 1.4rem; font-weight: 400;
-    }
-    .hero-tag strong { color: var(--text); font-weight: 500; }
-    .hero-desc {
-      font-size: .975rem; color: var(--text-sec);
-      max-width: 620px; line-height: 1.8; margin-bottom: 2.5rem;
-    }
-    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-p {
-      background: var(--accent); color: #fff;
-      padding: .7rem 1.6rem; border-radius: 8px;
-      font-size: .9rem; font-weight: 500;
-      transition: background .2s, transform .15s;
-    }
-    .btn-p:hover { background: var(--accent-light); transform: translateY(-1px); }
-    .btn-s {
-      border: 1px solid var(--border); color: var(--text-sec);
-      padding: .7rem 1.6rem; border-radius: 8px;
-      font-size: .9rem; font-weight: 500; background: var(--bg-card);
-      transition: border-color .2s, color .2s, transform .15s;
-    }
-    .btn-s:hover { border-color: var(--accent); color: var(--text); transform: translateY(-1px); }
-
-    /* ── ABOUT ── */
-    #about .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: start;
-    }
-    .about-text p { color: var(--text-sec); margin-bottom: 1.2rem; line-height: 1.85; }
-    .about-text p strong { color: var(--text); font-weight: 500; }
-    .interests-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
-    .int-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1rem 1.1rem;
-      transition: border-color .2s, transform .2s;
-    }
-    .int-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
-    .int-icon { font-size: 1.35rem; margin-bottom: .35rem; }
-    .int-title { font-size: .85rem; font-weight: 600; color: var(--text); }
-    .int-desc { font-size: .75rem; color: var(--text-muted); margin-top: .15rem; line-height: 1.5; }
-
-    /* ── EDUCATION ── */
-    #education .edu-list { display: grid; gap: 1.1rem; }
-    .edu-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.5rem 2rem;
-      display: grid; grid-template-columns: 52px 1fr;
-      gap: 1.4rem; align-items: start;
-      transition: border-color .2s;
-    }
-    .edu-card:hover { border-color: var(--border-hover); }
-    .edu-icon {
-      width: 52px; height: 52px; border-radius: 10px;
-      background: var(--bg); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: .78rem; color: var(--accent);
-      font-family: 'Space Grotesk', sans-serif; text-align: center;
-      line-height: 1.2; flex-shrink: 0;
-    }
-    .edu-school { font-weight: 600; font-size: .975rem; color: var(--text); }
-    .edu-degree { color: var(--text-sec); font-size: .875rem; margin: .2rem 0 .55rem; }
-    .edu-meta { display: flex; gap: 1.4rem; font-size: .75rem; color: var(--text-muted); flex-wrap: wrap; }
-    .chip-cur {
-      display: inline-block; font-size: .62rem; font-weight: 600;
-      letter-spacing: .04em;
-      background: rgba(59,130,246,.13); color: var(--accent-light);
-      border: 1px solid rgba(59,130,246,.28);
-      border-radius: 4px; padding: .12rem .45rem;
-      margin-left: .45rem; vertical-align: middle;
+      width: 10px; height: 10px; border-radius: 3px;
+      background: rgba(37,99,235,0.20);
+      border: 1px solid rgba(37,99,235,0.22);
+      margin-top: .2rem;
     }
 
-    /* ── EXPERIENCE ── */
-    #experience .exp-list { display: grid; gap: 1.1rem; }
-    .exp-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.75rem 2rem;
-      transition: border-color .2s;
-    }
-    .exp-card:hover { border-color: var(--border-hover); }
-    .exp-head {
-      display: flex; justify-content: space-between;
-      align-items: flex-start; flex-wrap: wrap; gap: .5rem;
-      margin-bottom: .25rem;
-    }
-    .exp-company { font-weight: 600; font-size: .975rem; color: var(--text); }
-    .exp-date { font-size: .78rem; color: var(--text-muted); }
-    .exp-role { font-size: .85rem; color: var(--accent-light); margin-bottom: .15rem; }
-    .exp-loc { font-size: .75rem; color: var(--text-muted); margin-bottom: 1rem; }
-    .exp-ul { list-style: none; padding: 0; }
-    .exp-ul li {
-      font-size: .875rem; color: var(--text-sec);
-      line-height: 1.75; padding-left: 1.2rem;
-      position: relative; margin-bottom: .35rem;
-    }
-    .exp-ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: .78rem; }
-    .exp-ul strong { color: var(--text); font-weight: 500; }
-
-    /* ── PROJECTS ── */
-    #projects .proj-grid {
+    /* ROLE FIT cards (elevator pitch: "where I fit") */
+    .role-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.1rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
     }
-    .proj-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.7rem;
-      display: flex; flex-direction: column;
-      transition: border-color .2s, transform .2s;
-    }
-    .proj-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-    .proj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .7rem; }
-    .proj-emoji { font-size: 1.45rem; }
-    .proj-links { display: flex; gap: .4rem; }
-    .proj-lnk {
-      font-size: .72rem; color: var(--text-muted);
-      border: 1px solid var(--border); border-radius: 5px;
-      padding: .22rem .55rem;
-      transition: color .2s, border-color .2s, opacity .2s;
-      display: inline-flex;
-      align-items: center;
-    }
-    .proj-lnk:hover { color: var(--accent-light); border-color: rgba(59,130,246,.4); }
-
-    /* ADDED: “not public yet” chip for private projects */
-    .proj-lnk.disabled {
-      opacity: .55;
-      cursor: not-allowed;
-      border-style: dashed;
-    }
-
-    .proj-name { font-weight: 600; font-size: .975rem; margin-bottom: .45rem; }
-    .proj-desc { font-size: .855rem; color: var(--text-sec); line-height: 1.75; flex: 1; margin-bottom: 1.2rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: .35rem; }
+    @media (max-width: 980px) { .role-grid { grid-template-columns: 1fr; } }
+    .role { padding: 1.2rem; }
+    .role h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+    .role p { color: var(--text-muted); font-size: .92rem; margin-bottom: .75rem; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: .45rem; }
     .tag {
-      font-size: .68rem; font-weight: 500; color: var(--text-muted);
-      background: rgba(255,255,255,.04); border: 1px solid var(--border);
-      border-radius: 4px; padding: .18rem .48rem;
+      font-size: .8rem;
+      padding: .25rem .55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-sec);
     }
 
-    /* ── SKILLS ── */
-    #skills .skills-wrap { display: grid; gap: 1.9rem; }
-    .skill-group-label {
-      font-size: .72rem; font-weight: 600; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--text-muted); margin-bottom: .65rem;
+    /* PROJECTS */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
     }
-    .skill-chips { display: flex; flex-wrap: wrap; gap: .45rem; }
-    .chip {
-      font-size: .815rem; color: var(--text-sec);
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 6px; padding: .38rem .8rem;
-      transition: border-color .2s, color .2s;
-    }
-    .chip:hover { border-color: rgba(59,130,246,.3); color: var(--text); }
-    .chip.blue { border-color: rgba(59,130,246,.3); color: var(--accent-light); background: rgba(59,130,246,.07); }
-    .chip.gold { border-color: rgba(245,158,11,.3); color: var(--gold-light); background: rgba(245,158,11,.07); }
+    @media (max-width: 900px) { .proj-grid { grid-template-columns: 1fr; } }
 
-    /* ── CONTACT ── */
+    .proj { padding: 1.2rem; }
+    .proj-head {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: .6rem;
+    }
+    .proj-name { font-size: 1.05rem; }
+    .proj-meta { color: var(--text-muted); font-size: .9rem; margin-top: .25rem; }
+    .proj-links { display: flex; gap: .45rem; flex-wrap: wrap; }
+    .plink {
+      font-size: .82rem;
+      padding: .32rem .6rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .plink:hover { text-decoration: none; border-color: var(--border-hover); }
+    .plink.disabled { opacity: .55; cursor: not-allowed; }
+    .proj-one { color: var(--text-sec); font-size: .95rem; line-height: 1.5; }
+    .proj-outcome {
+      margin-top: .75rem;
+      display: flex; gap: .5rem; flex-wrap: wrap;
+      color: var(--text-muted);
+      font-size: .9rem;
+    }
+
+    /* SKILLS (compact) */
+    .skills-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 900px) { .skills-wrap { grid-template-columns: 1fr; } }
+    .skill { padding: 1.2rem; }
+    .skill h3 { font-size: 1.05rem; margin-bottom: .55rem; }
+    .skill .tag-row { gap: .4rem; }
+
+    /* PERSONAL (interests) */
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 980px) { .interest-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .interest-grid { grid-template-columns: 1fr; } }
+
+    .interest { padding: 1.15rem; display: grid; gap: .35rem; }
+    .interest .ico { font-size: 1.35rem; }
+    .interest .t { font-weight: 800; font-family: 'Space Grotesk', sans-serif; color: var(--text); }
+    .interest .d { color: var(--text-muted); font-size: .92rem; }
+
+    /* CONTACT */
     #contact { text-align: center; }
     .contact-box {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 4rem 3rem;
-      max-width: 580px; margin: 0 auto;
+      padding: 2.4rem 1.6rem;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff, #fbfcff);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      max-width: 720px;
+      margin: 0 auto;
     }
-    .contact-box h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin-bottom: .9rem; }
-    .contact-box p { color: var(--text-sec); margin-bottom: 2.25rem; line-height: 1.8; }
-    .contact-box p strong { color: var(--text); }
-    .contact-links { display: flex; justify-content: center; gap: .85rem; flex-wrap: wrap; }
+    .contact-box p { color: var(--text-muted); margin-top: .6rem; margin-bottom: 1.2rem; }
+    .contact-links { display: flex; justify-content: center; gap: .65rem; flex-wrap: wrap; }
     .c-link {
       display: inline-flex; align-items: center; gap: .45rem;
-      font-size: .875rem; color: var(--text-sec);
-      border: 1px solid var(--border); border-radius: 8px;
-      padding: .6rem 1.2rem; background: var(--bg);
-      transition: border-color .2s, color .2s, transform .15s;
+      padding: .62rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 650;
     }
-    .c-link:hover { border-color: var(--accent); color: var(--text); transform: translateY(-1px); }
+    .c-link:hover { text-decoration: none; border-color: var(--border-hover); box-shadow: var(--shadow); }
 
-    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 2rem 0; text-align: center;
-      font-size: .78rem; color: var(--text-muted);
-    }
-    footer a { color: var(--accent); opacity: .7; transition: opacity .2s; }
-    footer a:hover { opacity: 1; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      #about .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .edu-card { grid-template-columns: 1fr; }
-      .edu-icon { display: none; }
-      section { padding: 4rem 0; }
-      .contact-box { padding: 2.5rem 1.5rem; }
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: .9rem;
     }
   </style>
 </head>
 
 <body>
-  <!-- ADDED (A11y): first focusable element -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- NAV -->
-  <!-- CHANGED: aria-label + logo points to #hero instead of # -->
   <nav id="nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Go to top">S<span>R</span></a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#snapshot">Snapshot</a></li>
+        <li><a href="#story">Story</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#personal">Personal</a></li>
         <li><a href="#contact" class="nav-cta">Contact →</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ADDED: wrap main page content -->
   <main id="main">
     <!-- HERO -->
     <section id="hero">
       <div class="container">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Open to Summer 2026 Internships &amp; Co-ops
-        </div>
-        <p class="hero-hi">Hi, I'm</p>
-        <h1 class="hero-name">Shamsad Rahman</h1>
-
-        <!-- CHANGED: “enthusiast” -> clear positioning + exploration -->
-        <p class="hero-tag">
-          <strong>MSIE Candidate @ ASU</strong> &nbsp;·&nbsp;
-          Analytics &amp; Optimization &nbsp;·&nbsp;
-          Exploring Quant Finance
-        </p>
-
-        <!-- CHANGED: less “vibes”, more proof + honest exploration -->
-        <p class="hero-desc">
-          Industrial engineer by training. Builder by habit. I like turning messy business problems into
-          models, dashboards, and automated workflows. Lately I’ve been exploring quantitative finance
-          through simulation, forecasting, and market-focused side projects.
-        </p>
-
-        <!-- CHANGED: added Resume CTA -->
-        <div class="hero-ctas">
-          <a href="#projects" class="btn-p">View My Work →</a>
-          <!-- Put resume.pdf in your repo root (same level as index.html) -->
-          <a href="resume.pdf" class="btn-s">Resume (PDF)</a>
-          <a href="#contact" class="btn-s">Get in Touch</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <span class="label">About Me</span>
-            <h2 class="sec-title">More than a résumé.</h2>
-
-            <!-- CHANGED: toned down overclaiming, clarified the “quant-curious” story -->
-            <p>
-              I'm an Industrial Engineering graduate from <strong>Purdue University</strong>, currently pursuing an M.S. at
-              <strong>Arizona State University</strong>. I enjoy building practical systems — forecasting, optimization, and
-              analytics — that help people make better decisions.
-            </p>
-
-            <p>
-              I’m <strong>exploring quantitative finance</strong> (not claiming mastery). I’m using projects as a way to build intuition:
-              stochastic modeling, simulation, and the “how do you test this honestly?” loop that comes with data work.
-            </p>
-
-            <p>
-              I have a <strong>strong entrepreneurial drive</strong>. I care about the whole stack: the problem, the product,
-              the business model, and the people it serves.
-            </p>
-
-            <p>
-              Outside of work, I follow <strong>economics and geopolitics</strong> and like thinking about how incentives and systems
-              shape outcomes at scale.
-            </p>
-          </div>
-
+        <div class="hero-grid">
           <div>
-            <span class="label" style="margin-bottom:1rem; display:block;">When I'm not studying</span>
-            <div class="interests-grid">
-              <div class="int-card">
-                <div class="int-icon">🏎️</div>
-                <div class="int-title">Formula 1</div>
-                <div class="int-desc">Strategy, data, and speed.</div>
-              </div>
-              <div class="int-card">
-                <div class="int-icon">⌚</div>
-                <div class="int-title">Horology</div>
-                <div class="int-desc">Mechanical watches. Engineering you can wear.</div>
-              </div>
-              <div class="int-card">
-                <div class="int-icon">⚽</div>
-                <div class="int-title">Football</div>
-                <div class="int-desc">Tactics, data, and passion.</div>
-              </div>
-              <div class="int-card">
-                <div class="int-icon">🌍</div>
-                <div class="int-title">Geopolitics</div>
-                <div class="int-desc">Economics, power, and incentives.</div>
+            <div class="hero-toprow">
+              <div class="avatar" aria-hidden="true">SR</div>
+              <div>
+                <div class="who">MSIE @ ASU · Industrial Engineering</div>
+                <div class="pill-row" style="margin-top:.55rem;">
+                  <span class="pill">📍 <strong>Tempe, AZ</strong></span>
+                  <span class="pill">🟢 <strong>Open Summer 2026</strong></span>
+                  <span class="pill">🧠 Exploring <strong>Quant Finance</strong></span>
+                </div>
               </div>
             </div>
+
+            <h1 class="hero-name">Shamsad Rahman</h1>
+            <p class="hero-sub">
+              I build analytics + optimization tools that make decisions easier—forecasting, dashboards,
+              automation—and I’m pressure-testing whether markets/quant work is my long-term lane.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">View Projects →</a>
+              <a class="btn" href="resume.pdf">Resume (PDF)</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <!-- Right side: infographic “quick facts” -->
+          <div class="card pad">
+            <div class="mini-grid">
+              <div class="mini">
+                <div class="k">Current focus</div>
+                <div class="v">Analytics + OR</div>
+                <div class="s">Forecasting · optimization · automation</div>
+              </div>
+              <div class="mini">
+                <div class="k">Exploring</div>
+                <div class="v">Quant finance</div>
+                <div class="s">Simulation · market intuition · eval loops</div>
+              </div>
+              <div class="mini">
+                <div class="k">Core tools</div>
+                <div class="v">Python · SQL</div>
+                <div class="s">Tableau · Excel · NumPy/Pandas</div>
+              </div>
+              <div class="mini">
+                <div class="k">Looking for</div>
+                <div class="v">Summer 2026</div>
+                <div class="s">Internships & co-ops</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SNAPSHOT (big-number proof) -->
+    <section id="snapshot">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Snapshot</span>
+          <h2 class="sec-title">What I’ve delivered (fast)</h2>
+          <p class="sec-sub">Big numbers first. Details later.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="num">+15%</div>
+            <div class="lbl">Forecast accuracy</div>
+            <div class="note">30/60/90-day demand forecasts</div>
+          </div>
+          <div class="stat">
+            <div class="num">+5%</div>
+            <div class="lbl">RevPAR lift</div>
+            <div class="note">Pricing + inventory controls</div>
+          </div>
+          <div class="stat">
+            <div class="num">−50%</div>
+            <div class="lbl">Manual entry</div>
+            <div class="note">Workflow automation (ERP + BI)</div>
+          </div>
+          <div class="stat">
+            <div class="num">$16M</div>
+            <div class="lbl">Yield protected</div>
+            <div class="note">Displacement analysis on RFPs</div>
           </div>
         </div>
       </div>
@@ -493,82 +535,86 @@
 
     <div class="divider"></div>
 
-    <!-- EDUCATION -->
-    <section id="education">
+    <!-- STORY -->
+    <section id="story">
       <div class="container">
-        <span class="label">Education</span>
-        <h2 class="sec-title">Academic Background</h2>
-        <p class="sec-sub">Building the foundation for a career at the intersection of engineering, data, and finance.</p>
-        <div class="edu-list">
-          <div class="edu-card">
-            <div class="edu-icon">ASU</div>
-            <div>
-              <div class="edu-school">
-                Arizona State University — Ira A. Fulton Schools of Engineering
-                <span class="chip-cur">Current</span>
-              </div>
-              <div class="edu-degree">Master of Science in Industrial Engineering</div>
-              <div class="edu-meta">
-                <span>📍 Tempe, AZ</span>
-                <span>🎓 Expected May 2027</span>
+        <div class="section-head">
+          <span class="label">Story</span>
+          <h2 class="sec-title">Me in 10 seconds</h2>
+          <p class="sec-sub">Structured, skimmable, and honest about the “exploring quant” piece.</p>
+        </div>
+
+        <div class="story-grid">
+          <div class="card story-card">
+            <div class="story-title">
+              <h3>Now</h3>
+              <span class="chip">ASU · MSIE</span>
+            </div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Building analytics + optimization projects that ship.</span></li>
+              <li><span class="dot"></span><span>Improving ML/AI fundamentals and evaluation discipline.</span></li>
+              <li><span class="dot"></span><span>Exploring quant finance via simulation + market projects.</span></li>
+            </ul>
+          </div>
+
+          <div class="card story-card">
+            <div class="story-title">
+              <h3>Previously</h3>
+              <span class="chip">Industry</span>
+            </div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Revenue analytics: forecasting, pricing, and capacity decisions.</span></li>
+              <li><span class="dot"></span><span>BI automation: ERP → dashboards → workflows.</span></li>
+              <li><span class="dot"></span><span>Always measured outcomes (accuracy, lift, time saved).</span></li>
+            </ul>
+          </div>
+
+          <div class="card story-card">
+            <div class="story-title">
+              <h3>Next</h3>
+              <span class="chip">Summer 2026</span>
+            </div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Internships/co-ops in analytics, OR, product/ops, or data.</span></li>
+              <li><span class="dot"></span><span>Open to markets/quant roles where I can learn fast + contribute.</span></li>
+              <li><span class="dot"></span><span>Keep building a “project ladder” toward stronger quant intuition.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role-fit (infographic “where I fit”) -->
+        <div style="margin-top:2rem;">
+          <h2 class="sec-title" style="font-size:1.25rem;">Where I fit best</h2>
+          <p class="sec-sub" style="margin-bottom:0;">Pick the card that matches the role you’re hiring for.</p>
+
+          <div class="role-grid">
+            <div class="card role">
+              <h3>Analytics / Data</h3>
+              <p>Turn messy problems into forecasts, dashboards, and measurable decisions.</p>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Tableau</span>
+                <span class="tag">Forecasting</span><span class="tag">Experimentation</span>
               </div>
             </div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-icon">PU</div>
-            <div>
-              <div class="edu-school">Purdue University — Edwardson School of Industrial Engineering</div>
-              <div class="edu-degree">Bachelor of Science in Industrial Engineering</div>
-              <div class="edu-meta">
-                <span>📍 West Lafayette, IN</span>
-                <span>🎓 Aug 2019 – May 2024</span>
+            <div class="card role">
+              <h3>Optimization / OR</h3>
+              <p>Model constraints, trade-offs, and capacity decisions with clarity.</p>
+              <div class="tag-row">
+                <span class="tag">Operations Research</span><span class="tag">Simulation</span>
+                <span class="tag">Optimization</span><span class="tag">Decision-making</span>
+              </div>
+            </div>
+            <div class="card role">
+              <h3>Markets (Exploring)</h3>
+              <p>Building intuition via simulation + disciplined evaluation loops.</p>
+              <div class="tag-row">
+                <span class="tag">Stochastic modeling</span><span class="tag">Monte Carlo</span>
+                <span class="tag">Market curiosity</span><span class="tag">Learning velocity</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <div class="divider"></div>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <span class="label">Experience</span>
-        <h2 class="sec-title">Professional Background</h2>
-        <p class="sec-sub">Applying engineering and analytics to real business problems.</p>
-        <div class="exp-list">
-          <div class="exp-card">
-            <div class="exp-head">
-              <div>
-                <div class="exp-company">Assurance Hospitality Management</div>
-                <div class="exp-role">Revenue Analyst</div>
-                <div class="exp-loc">📍 Salt Lake City, UT</div>
-              </div>
-              <div class="exp-date">Nov 2024 – Jul 2025</div>
-            </div>
-            <ul class="exp-ul">
-              <li>Developed rolling <strong>30/60/90-day demand forecasts</strong>, improving forecast accuracy by <strong>15%</strong>.</li>
-              <li>Optimized daily pricing and inventory controls, raising <strong>RevPAR by 5%</strong> and improving <strong>RGI by +2 points</strong>.</li>
-              <li>Conducted displacement analyses on group RFPs worth <strong>$16M</strong> to protect yield during peak demand.</li>
-            </ul>
-          </div>
-          <div class="exp-card">
-            <div class="exp-head">
-              <div>
-                <div class="exp-company">Hupp Aerospace and Defense</div>
-                <div class="exp-role">Business Intelligence Analyst — Senior Design</div>
-                <div class="exp-loc">📍 New Haven, IN</div>
-              </div>
-              <div class="exp-date">Jan 2024 – May 2024</div>
-            </div>
-            <ul class="exp-ul">
-              <li>Integrated Quantum ERP, Tableau, and Wrike to automate workflows, reducing manual entry by <strong>50%</strong>.</li>
-              <li>Built Tableau QA dashboards, increasing product visibility by <strong>25%</strong> and cutting overhead by <strong>30%</strong>.</li>
-              <li>Developed SOPs and training materials to ensure system interoperability and reduce onboarding time.</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -577,116 +623,88 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div class="container">
-        <span class="label">Projects</span>
-        <h2 class="sec-title">Things I've Built</h2>
-        <p class="sec-sub">Personal and academic projects spanning AI, simulation, and data analytics.</p>
+        <div class="section-head">
+          <span class="label">Projects</span>
+          <h2 class="sec-title">Built things, not paragraphs</h2>
+          <p class="sec-sub">One-line what it is, one-line what changed. That’s it.</p>
+        </div>
 
         <div class="proj-grid">
-          <div class="proj-card">
-            <div class="proj-top">
-              <span class="proj-emoji">🤖</span>
 
-              <!-- CHANGED: don’t link to the wrong project; mark as not public (or swap in real URLs) -->
+          <div class="card proj">
+            <div class="proj-head">
+              <div>
+                <h3 class="proj-name">🤖 Autonomous AI Agent</h3>
+                <div class="proj-meta">Langflow · ReAct · reflection loop</div>
+              </div>
               <div class="proj-links">
-                <span class="proj-lnk disabled" title="Not public yet">Private</span>
-                <a href="mailto:srahma20@asu.edu?subject=AI%20Agent%20Demo%20Request"
-                   class="proj-lnk"
-                   aria-label="Request a demo of Autonomous AI Agent via email">
-                  Request demo
-                </a>
+                <span class="plink disabled" title="Not public yet">Private</span>
+                <a class="plink" href="mailto:srahma20@asu.edu?subject=Autonomous%20AI%20Agent%20Demo%20Request">Request demo</a>
               </div>
             </div>
-
-            <div class="proj-name">Autonomous AI Agent</div>
-            <div class="proj-desc">
-              Built a ReAct + reflection-style agent workflow in Langflow for multi-step queries.
-              Focused on tool-use reliability, iteration, and failure analysis.
+            <div class="proj-one">
+              Agent workflow for multi-step queries with iteration + failure analysis.
             </div>
-            <div class="tags">
-              <span class="tag">Langflow</span>
-              <span class="tag">AI Agents</span>
-              <span class="tag">ReAct</span>
-              <span class="tag">LLM</span>
+            <div class="proj-outcome">
+              ✅ Focus: tool-use reliability · eval discipline · iteration
             </div>
           </div>
 
-          <div class="proj-card">
-            <div class="proj-top">
-              <span class="proj-emoji">📊</span>
+          <div class="card proj">
+            <div class="proj-head">
+              <div>
+                <h3 class="proj-name">📊 Monte Carlo Simulation Suite</h3>
+                <div class="proj-meta">Python · NumPy · Matplotlib</div>
+              </div>
               <div class="proj-links">
-                <!-- CHANGED: added rel="noopener noreferrer" for target=_blank links -->
-                <a href="https://github.com/shamsadr/monte-carlo-sim"
-                   class="proj-lnk"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Open repository for Monte Carlo Simulation Suite (new tab)">
-                  Repo
-                </a>
-                <a href="https://shamsadr.github.io/monte-carlo-sim"
-                   class="proj-lnk"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Open live demo for Monte Carlo Simulation Suite (new tab)">
-                  Live
-                </a>
+                <a class="plink" href="https://github.com/shamsadr/monte-carlo-sim" target="_blank" rel="noopener noreferrer">Repo</a>
+                <a class="plink" href="https://shamsadr.github.io/monte-carlo-sim" target="_blank" rel="noopener noreferrer">Live</a>
               </div>
             </div>
-            <div class="proj-name">Monte Carlo Simulation Suite</div>
-            <div class="proj-desc">
-              Pi estimation via random sampling and stock price simulation via Geometric Brownian Motion,
-              built with NumPy and Matplotlib. Simulated mean matched the analytical expectation within
-              0.16% across 50,000 paths.
+            <div class="proj-one">
+              Random sampling + GBM stock simulation; validated simulated mean vs analytical expectation.
             </div>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">Monte Carlo</span>
-              <span class="tag">GBM</span>
-              <span class="tag">Finance</span>
+            <div class="proj-outcome">
+              ✅ Result: mean within <strong>0.16%</strong> across 50,000 paths
             </div>
           </div>
 
-          <div class="proj-card">
-            <div class="proj-top">
-              <span class="proj-emoji">⚡</span>
+          <div class="card proj">
+            <div class="proj-head">
+              <div>
+                <h3 class="proj-name">⚡ EV Charging Optimization</h3>
+                <div class="proj-meta">SAS · DEA · simulation</div>
+              </div>
               <div class="proj-links">
-                <span class="proj-lnk disabled" title="Write-up available on request">On request</span>
+                <span class="plink disabled" title="Write-up available on request">On request</span>
               </div>
             </div>
-            <div class="proj-name">EV Charging Station Optimization</div>
-            <div class="proj-desc">
-              Collaborated with SAS Institute via Purdue's VIP program to optimize EV charging
-              station placement using Data Envelopment Analysis. Improved placement precision by 15%
-              by integrating demand and cost factors into simulation models.
+            <div class="proj-one">
+              Placement optimization incorporating demand + cost factors.
             </div>
-            <div class="tags">
-              <span class="tag">SAS</span>
-              <span class="tag">DEA</span>
-              <span class="tag">Optimization</span>
-              <span class="tag">Simulation</span>
+            <div class="proj-outcome">
+              ✅ Improvement: +15% placement precision (project claim)
             </div>
           </div>
 
-          <div class="proj-card">
-            <div class="proj-top">
-              <span class="proj-emoji">📋</span>
+          <div class="card proj">
+            <div class="proj-head">
+              <div>
+                <h3 class="proj-name">📋 QA Dashboard (Hupp)</h3>
+                <div class="proj-meta">Tableau · ERP integration · automation</div>
+              </div>
               <div class="proj-links">
-                <span class="proj-lnk disabled" title="Case details available on request">On request</span>
+                <span class="plink disabled" title="Case details available on request">On request</span>
               </div>
             </div>
-            <div class="proj-name">QA Dashboard — Hupp Aerospace</div>
-            <div class="proj-desc">
-              Integrated Quantum ERP, Tableau, and Wrike CRM to build a real-time QA dashboard for
-              an aerospace manufacturer. Improved product quality visibility by 25% and cut reporting
-              overhead by 30%.
+            <div class="proj-one">
+              Real-time QA visibility and reduced reporting overhead through automation.
             </div>
-            <div class="tags">
-              <span class="tag">Tableau</span>
-              <span class="tag">ERP</span>
-              <span class="tag">BI</span>
-              <span class="tag">Automation</span>
+            <div class="proj-outcome">
+              ✅ Outcome: +25% visibility · −30% overhead (project claim)
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -696,48 +714,63 @@
     <!-- SKILLS -->
     <section id="skills">
       <div class="container">
-        <span class="label">Skills</span>
-        <h2 class="sec-title">Tools &amp; Technologies</h2>
-        <p class="sec-sub">What I work with day to day.</p>
+        <div class="section-head">
+          <span class="label">Skills</span>
+          <h2 class="sec-title">Tools I actually use</h2>
+          <p class="sec-sub">Grouped for scanning (not a giant word wall).</p>
+        </div>
+
         <div class="skills-wrap">
-          <div>
-            <div class="skill-group-label">Languages</div>
-            <div class="skill-chips">
-              <span class="chip blue">Python</span>
-              <span class="chip blue">SQL</span>
-              <span class="chip">R</span>
-              <span class="chip">SAS</span>
-              <span class="chip">JavaScript</span>
+          <div class="card skill">
+            <h3>Core</h3>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Tableau</span>
+              <span class="tag">Excel (Advanced)</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
             </div>
           </div>
-          <div>
-            <div class="skill-group-label">BI &amp; Visualization</div>
-            <div class="skill-chips">
-              <span class="chip blue">Tableau</span>
-              <span class="chip">Power BI</span>
-              <span class="chip">Excel (Advanced)</span>
-              <span class="chip">Matplotlib</span>
+          <div class="card skill">
+            <h3>Methods</h3>
+            <div class="tag-row">
+              <span class="tag">Demand forecasting</span><span class="tag">Stochastic modeling</span>
+              <span class="tag">Simulation</span><span class="tag">Operations Research</span>
+              <span class="tag">Financial modeling</span>
             </div>
           </div>
-          <div>
-            <div class="skill-group-label">AI &amp; Automation</div>
-            <div class="skill-chips">
-              <span class="chip gold">Langflow</span>
-              <span class="chip gold">AI Agent Workflows</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">Pandas</span>
-            </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PERSONAL -->
+    <section id="personal">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Personal</span>
+          <h2 class="sec-title">What I’m like outside work</h2>
+          <p class="sec-sub">Still human. Still curious. Still consistent themes (strategy + systems).</p>
+        </div>
+
+        <div class="interest-grid">
+          <div class="card interest">
+            <div class="ico">🏎️</div>
+            <div class="t">Formula 1</div>
+            <div class="d">Strategy, telemetry, trade-offs.</div>
           </div>
-          <div>
-            <div class="skill-group-label">Methodologies</div>
-            <div class="skill-chips">
-              <span class="chip">Operations Research</span>
-              <span class="chip">Demand Forecasting</span>
-              <span class="chip">Stochastic Modeling</span>
-              <span class="chip">Financial Modeling</span>
-              <span class="chip">Monte Carlo Simulation</span>
-              <span class="chip">Data Envelopment Analysis</span>
-            </div>
+          <div class="card interest">
+            <div class="ico">⌚</div>
+            <div class="t">Horology</div>
+            <div class="d">Mechanical systems you can wear.</div>
+          </div>
+          <div class="card interest">
+            <div class="ico">⚽</div>
+            <div class="t">Football</div>
+            <div class="d">Tactics, structure, momentum.</div>
+          </div>
+          <div class="card interest">
+            <div class="ico">🌍</div>
+            <div class="t">Geopolitics</div>
+            <div class="d">Incentives and system dynamics.</div>
           </div>
         </div>
       </div>
@@ -749,30 +782,17 @@
     <section id="contact">
       <div class="container">
         <div class="contact-box">
-          <span class="label" style="display:block; text-align:center;">Get In Touch</span>
-          <h2>Let's Talk.</h2>
-
-          <!-- CHANGED: clarified role focus + quant as “exploring” -->
+          <span class="label" style="display:block; text-align:center;">Get in touch</span>
+          <h2 class="sec-title" style="margin-bottom:.25rem;">Let’s talk.</h2>
           <p>
-            I'm actively looking for <strong>Summer 2026 internships and co-ops</strong> in
-            analytics, operations research, product/ops, or data roles. I’m also open to
-            quant/markets opportunities where the work is a good fit as I continue exploring that path.
+            Open to <strong>Summer 2026 internships & co-ops</strong>. Best fit: analytics, OR/optimization, product/ops, data.
+            Also open to markets/quant roles that are a strong learning + impact match.
           </p>
 
           <div class="contact-links">
-            <a href="mailto:srahma20@asu.edu" class="c-link">✉️&nbsp; srahma20@asu.edu</a>
-            <a href="https://linkedin.com/in/shamsadr"
-               class="c-link"
-               target="_blank"
-               rel="noopener noreferrer">
-              💼&nbsp; LinkedIn
-            </a>
-            <a href="https://github.com/shamsadr"
-               class="c-link"
-               target="_blank"
-               rel="noopener noreferrer">
-              🐙&nbsp; GitHub
-            </a>
+            <a class="c-link" href="mailto:srahma20@asu.edu">✉️ srahma20@asu.edu</a>
+            <a class="c-link" href="https://linkedin.com/in/shamsadr" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            <a class="c-link" href="https://github.com/shamsadr" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -780,12 +800,8 @@
 
     <footer>
       <div class="container">
-        Shamsad Rahman &nbsp;·&nbsp;
-        <a href="https://github.com/shamsadr/shamsadr.github.io"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Source
-        </a>
+        Shamsad Rahman ·
+        <a href="https://github.com/shamsadr/shamsadr.github.io" target="_blank" rel="noopener noreferrer">View Source</a>
       </div>
     </footer>
   </main>
