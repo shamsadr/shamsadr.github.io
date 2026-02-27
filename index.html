@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shamsad Rahman — MSIE Candidate & Builder</title>
 
-  <!-- CHANGED (SEO): shorter + scannable positioning -->
   <meta name="description" content="Shamsad Rahman — MSIE candidate at ASU. Analytics + optimization builder exploring quant finance. Open to Summer 2026 internships & co-ops." />
   <link rel="canonical" href="https://shamsadr.github.io/" />
   <meta name="theme-color" content="#f6f7fb" />
 
-  <!-- Social sharing (optional image: add /og.png) -->
   <meta property="og:title" content="Shamsad Rahman — MSIE Candidate & Builder" />
   <meta property="og:description" content="Analytics + optimization builder exploring quant finance. Open to Summer 2026 internships & co-ops." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shamsadr.github.io/" />
-  <!-- <meta property="og:image" content="https://shamsadr.github.io/og.png" /> -->
   <meta name="twitter:card" content="summary" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,26 +34,21 @@
     a:hover { text-decoration: underline; }
 
     :root {
-      /* CHANGED: LIGHT THEME */
       --bg:           #f6f7fb;
       --bg-card:      #ffffff;
       --bg-soft:      #f1f5ff;
       --border:       rgba(15,23,42,0.10);
       --border-hover: rgba(37,99,235,0.35);
-
       --text:         #0f172a;
       --text-sec:     #334155;
       --text-muted:   #64748b;
-
       --accent:       #2563eb;
       --accent-2:     #7c3aed;
       --gold:         #f59e0b;
-
       --radius:       14px;
       --max:          1080px;
-
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-      --shadow-2: 0 14px 40px rgba(15, 23, 42, 0.09);
+      --shadow:  0 10px 30px rgba(15,23,42,0.06);
+      --shadow-2: 0 14px 40px rgba(15,23,42,0.09);
     }
 
     h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; color: var(--text); }
@@ -88,7 +80,7 @@
       transition: background .25s, box-shadow .25s, border-bottom .25s;
     }
     nav.scrolled {
-      background: rgba(246,247,251,0.82);
+      background: rgba(246,247,251,0.92);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       box-shadow: 0 6px 20px rgba(15,23,42,0.05);
@@ -113,11 +105,46 @@
     }
     .nav-cta:hover { background: rgba(37,99,235,0.10); }
 
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: .4rem;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all .25s;
+    }
     @media (max-width: 860px) {
-      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        flex-direction: column;
+        background: rgba(246,247,251,0.97);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem 1.5rem;
+        gap: .75rem;
+        box-shadow: 0 8px 24px rgba(15,23,42,0.07);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { font-size: 1rem; display: block; padding: .3rem 0; }
+      .nav-cta { display: inline-block; }
     }
 
-    /* HERO (infographic layout) */
+    /* HERO */
     #hero { padding: 7.5rem 0 3.5rem; }
     .hero-grid {
       display: grid;
@@ -125,9 +152,7 @@
       gap: 2rem;
       align-items: start;
     }
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
     .pill-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.1rem; }
     .pill {
@@ -148,11 +173,29 @@
       margin-bottom: .7rem;
       letter-spacing: -0.02em;
     }
-    .hero-sub {
-      font-size: 1.05rem;
-      color: var(--text-sec);
+
+    .hero-bullets {
+      list-style: none;
+      display: grid;
+      gap: .45rem;
       margin-bottom: 1.1rem;
-      max-width: 46ch;
+    }
+    .hero-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      color: var(--text-sec);
+      font-size: .95rem;
+      line-height: 1.45;
+    }
+    .hero-bullets li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      background: rgba(37,99,235,0.22);
+      border: 1px solid rgba(37,99,235,0.35);
+      margin-top: .38rem;
     }
 
     .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.2rem; }
@@ -175,7 +218,6 @@
       border-color: rgba(37,99,235,0.25);
     }
 
-    /* Right-side hero cards */
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -189,9 +231,7 @@
       grid-template-columns: 1fr 1fr;
       gap: .8rem;
     }
-    @media (max-width: 520px) {
-      .mini-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 520px) { .mini-grid { grid-template-columns: 1fr; } }
     .mini {
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -202,30 +242,17 @@
     .mini .v { font-weight: 700; color: var(--text); font-family: 'Space Grotesk', sans-serif; }
     .mini .s { margin-top: .35rem; font-size: .85rem; color: var(--text-sec); }
 
-    .avatar {
+    .avatar-img {
       width: 56px; height: 56px;
       border-radius: 16px;
-      display: grid; place-items: center;
-      background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(124,58,237,0.10));
+      object-fit: cover;
       border: 1px solid rgba(37,99,235,0.18);
-      color: var(--accent);
-      font-weight: 800;
-      font-family: 'Space Grotesk', sans-serif;
-      letter-spacing: .02em;
-    }
-
-    .avatar-img{
-      width:56px;height:56px;
-      border-radius:16px;
-      object-fit:cover;
-      border:1px solid rgba(37,99,235,0.18);
       box-shadow: var(--shadow);
     }
-    
     .hero-toprow { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
     .hero-toprow .who { color: var(--text-muted); font-size: .9rem; }
 
-    /* SNAPSHOT STATS (big numbers = infographic) */
+    /* SECTION SHARED */
     #snapshot { padding-top: 3rem; }
     .section-head { margin-bottom: 1.4rem; }
     .label {
@@ -239,6 +266,7 @@
     .sec-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom: .4rem; }
     .sec-sub { color: var(--text-muted); font-size: .95rem; max-width: 70ch; }
 
+    /* SNAPSHOT */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -247,7 +275,6 @@
     }
     @media (max-width: 980px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .stats-grid { grid-template-columns: 1fr; } }
-
     .stat {
       padding: 1.05rem 1.1rem;
       border-radius: var(--radius);
@@ -256,31 +283,47 @@
       box-shadow: var(--shadow);
     }
     .stat .num {
-      font-size: 1.8rem;
-      line-height: 1.1;
+      font-size: 1.8rem; line-height: 1.1;
       font-family: 'Space Grotesk', sans-serif;
-      font-weight: 800;
-      color: var(--text);
+      font-weight: 800; color: var(--text);
       letter-spacing: -0.02em;
     }
     .stat .lbl { margin-top: .3rem; color: var(--text-muted); font-size: .86rem; }
     .stat .note { margin-top: .55rem; color: var(--text-sec); font-size: .9rem; }
 
-    /* STORY: Now / Previously / Next (less prose, more structure) */
-    .story-grid {
+    /* EDUCATION */
+    .edu-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-top: 1.2rem;
     }
-    @media (max-width: 950px) { .story-grid { grid-template-columns: 1fr; } }
-
-    .story-card { padding: 1.2rem; }
-    .story-title {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: .75rem;
+    @media (max-width: 900px) { .edu-grid { grid-template-columns: 1fr; } }
+    .edu-card { padding: 1.3rem; }
+    .edu-header {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 1rem; margin-bottom: .75rem;
     }
-    .story-title h3 { font-size: 1.1rem; }
+    .edu-degree { font-size: 1.05rem; margin-bottom: .2rem; }
+    .edu-school { color: var(--text-muted); font-size: .88rem; line-height: 1.4; }
+    .edu-detail { margin-top: .75rem; }
+    .edu-detail .k {
+      font-size: .72rem; font-weight: 700; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: .1em; margin-bottom: .4rem;
+    }
+    .course-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+    /* EXPERIENCE */
+    .exp-list { display: grid; gap: 1rem; margin-top: 1.2rem; }
+    .exp-card { padding: 1.3rem; }
+    .exp-header {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 1rem; margin-bottom: .75rem;
+    }
+    .exp-title { font-size: 1.05rem; margin-bottom: .2rem; }
+    .exp-company { color: var(--text-muted); font-size: .9rem; }
+
+    /* SHARED BULLETS + CHIP */
     .chip {
       display: inline-flex; align-items: center;
       padding: .22rem .55rem;
@@ -288,17 +331,14 @@
       border: 1px solid var(--border);
       background: var(--bg-soft);
       color: var(--text-muted);
-      font-size: .78rem;
-      font-weight: 650;
+      font-size: .78rem; font-weight: 650;
+      white-space: nowrap;
     }
     .bullets { list-style: none; display: grid; gap: .5rem; }
     .bullets li {
       display: grid; grid-template-columns: 20px 1fr;
-      gap: .55rem;
-      align-items: start;
-      color: var(--text-sec);
-      font-size: .95rem;
-      line-height: 1.45;
+      gap: .55rem; align-items: start;
+      color: var(--text-sec); font-size: .95rem; line-height: 1.45;
     }
     .dot {
       width: 10px; height: 10px; border-radius: 3px;
@@ -307,12 +347,27 @@
       margin-top: .2rem;
     }
 
-    /* ROLE FIT cards (elevator pitch: "where I fit") */
+    /* NOW & NEXT */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 950px) { .story-grid { grid-template-columns: 1fr; } }
+    .story-card { padding: 1.2rem; }
+    .story-title {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: .75rem;
+    }
+    .story-title h3 { font-size: 1.1rem; }
+
+    /* ROLE FIT */
     .role-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
-      margin-top: 1.2rem;
+      margin-top: 1rem;
     }
     @media (max-width: 980px) { .role-grid { grid-template-columns: 1fr; } }
     .role { padding: 1.2rem; }
@@ -336,12 +391,10 @@
       margin-top: 1.2rem;
     }
     @media (max-width: 900px) { .proj-grid { grid-template-columns: 1fr; } }
-
     .proj { padding: 1.2rem; }
     .proj-head {
       display: flex; align-items: flex-start; justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: .6rem;
+      gap: 1rem; margin-bottom: .6rem;
     }
     .proj-name { font-size: 1.05rem; }
     .proj-meta { color: var(--text-muted); font-size: .9rem; margin-top: .25rem; }
@@ -362,11 +415,10 @@
     .proj-outcome {
       margin-top: .75rem;
       display: flex; gap: .5rem; flex-wrap: wrap;
-      color: var(--text-muted);
-      font-size: .9rem;
+      color: var(--text-muted); font-size: .9rem;
     }
 
-    /* SKILLS (compact) */
+    /* SKILLS */
     .skills-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -378,7 +430,7 @@
     .skill h3 { font-size: 1.05rem; margin-bottom: .55rem; }
     .skill .tag-row { gap: .4rem; }
 
-    /* PERSONAL (interests) */
+    /* PERSONAL */
     .interest-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -387,7 +439,6 @@
     }
     @media (max-width: 980px) { .interest-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .interest-grid { grid-template-columns: 1fr; } }
-
     .interest { padding: 1.15rem; display: grid; gap: .35rem; }
     .interest .ico { font-size: 1.35rem; }
     .interest .t { font-weight: 800; font-family: 'Space Grotesk', sans-serif; color: var(--text); }
@@ -434,18 +485,21 @@
   <nav id="nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Go to top">S<span>R</span></a>
-      <ul class="nav-links">
-        <li><a href="#snapshot">Snapshot</a></li>
-        <li><a href="#story">Story</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#personal">Personal</a></li>
         <li><a href="#contact" class="nav-cta">Contact →</a></li>
       </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
   <main id="main">
+
     <!-- HERO -->
     <section id="hero">
       <div class="container">
@@ -453,11 +507,11 @@
           <div>
             <div class="hero-toprow">
               <img class="avatar-img"
-               src="Assets/Headshot1.png"
-               alt="Headshot of Shamsad Rahman"
-                 width="56" height="56"
-               loading="eager" decoding="async"
-               fetchpriority="high" />
+                src="Assets/Headshot1.png"
+                alt="Headshot of Shamsad Rahman"
+                width="56" height="56"
+                loading="eager" decoding="async"
+                fetchpriority="high" />
               <div>
                 <div class="who">MSIE @ ASU · Industrial Engineering</div>
                 <div class="pill-row" style="margin-top:.55rem;">
@@ -469,21 +523,20 @@
             </div>
 
             <h1 class="hero-name">Shamsad Rahman</h1>
-            
+
             <ul class="hero-bullets">
               <li>Forecasting + pricing decisions with measurable impact</li>
-              <li>Optimization / OR mindset (constraints, trade-offs, systems)</li>
+              <li>Optimization / OR mindset — constraints, trade-offs, systems</li>
               <li>Exploring markets via simulation + disciplined evaluation</li>
             </ul>
 
             <div class="hero-actions">
               <a class="btn primary" href="#projects">View Projects →</a>
-              <a class="btn" href="resume.pdf">Resume (PDF)</a>
+              <a class="btn" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
               <a class="btn" href="#contact">Contact</a>
             </div>
           </div>
 
-          <!-- Right side: infographic “quick facts” -->
           <div class="card pad">
             <div class="mini-grid">
               <div class="mini">
@@ -499,7 +552,7 @@
               <div class="mini">
                 <div class="k">Core tools</div>
                 <div class="v">Python · SQL</div>
-                <div class="s">Tableau · Excel · NumPy/Pandas</div>
+                <div class="s">Tableau · R · NumPy / Pandas</div>
               </div>
               <div class="mini">
                 <div class="k">Looking for</div>
@@ -509,21 +562,19 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- SNAPSHOT (big-number proof) -->
+    <!-- SNAPSHOT -->
     <section id="snapshot">
       <div class="container">
         <div class="section-head">
           <span class="label">Snapshot</span>
-          <h2 class="sec-title">What I’ve delivered (fast)</h2>
-          <p class="sec-sub">Big numbers first. Details later.</p>
+          <h2 class="sec-title">What I've delivered</h2>
+          <p class="sec-sub">Measurable outcomes from real work.</p>
         </div>
-
         <div class="stats-grid">
           <div class="stat">
             <div class="num">+15%</div>
@@ -551,13 +602,113 @@
 
     <div class="divider"></div>
 
-    <!-- STORY -->
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Education</span>
+          <h2 class="sec-title">Academic background</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="card edu-card">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">M.S. Industrial Engineering</h3>
+                <div class="edu-school">Arizona State University · Ira A. Fulton Schools of Engineering · Tempe, AZ</div>
+              </div>
+              <span class="chip">Expected May 2027</span>
+            </div>
+            <div class="edu-detail">
+              <div class="k">Focus areas</div>
+              <div class="course-row">
+                <span class="tag">Analytics</span>
+                <span class="tag">Operations Research</span>
+                <span class="tag">Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card edu-card">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">B.S. Industrial Engineering</h3>
+                <div class="edu-school">Purdue University · Edwardson School of Engineering · West Lafayette, IN</div>
+              </div>
+              <span class="chip">May 2024</span>
+            </div>
+            <div class="edu-detail">
+              <div class="k">Key coursework</div>
+              <div class="course-row">
+                <span class="tag">Production Planning</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Financial Modeling</span>
+                <span class="tag">Supply Chain Management</span>
+                <span class="tag">Operations Research</span>
+              </div>
+              <div style="margin-top:.65rem;">
+                <div class="k">Certification</div>
+                <div class="course-row">
+                  <span class="tag">Optimization Concepts for Data Science &amp; AI — SAS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Experience</span>
+          <h2 class="sec-title">Where I've worked</h2>
+          <p class="sec-sub">Revenue analytics, BI automation, and data-driven decision-making.</p>
+        </div>
+        <div class="exp-list">
+          <div class="card exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Revenue Analyst</h3>
+                <div class="exp-company">Assurance Hospitality Management · Salt Lake City, UT</div>
+              </div>
+              <span class="chip">Nov 2024 – Jul 2025</span>
+            </div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Developed rolling 30/60/90-day demand forecasts, improving forecast accuracy by 15%.</span></li>
+              <li><span class="dot"></span><span>Optimized daily pricing and inventory controls, raising RevPAR by 5% and RGI by +2 points.</span></li>
+              <li><span class="dot"></span><span>Conducted displacement analyses on group RFPs worth $16M to protect yield during peak demand.</span></li>
+            </ul>
+          </div>
+
+          <div class="card exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Business Intelligence Analyst</h3>
+                <div class="exp-company">Hupp Aerospace and Defense · Senior Design · New Haven, IN</div>
+              </div>
+              <span class="chip">Jan 2024 – May 2024</span>
+            </div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Integrated Quantum ERP, Tableau, and Wrike to automate workflows and reduce manual entry by 50%.</span></li>
+              <li><span class="dot"></span><span>Built Tableau QA dashboards, increasing product visibility by 25% and cutting reporting overhead by 30%.</span></li>
+              <li><span class="dot"></span><span>Developed SOPs and training materials to ensure system interoperability across teams.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- NOW & NEXT + WHERE I FIT -->
     <section id="story">
       <div class="container">
         <div class="section-head">
-          <span class="label">Story</span>
-          <h2 class="sec-title">Me in 10 seconds</h2>
-          <p class="sec-sub">Structured, skimmable, and honest about the “exploring quant” piece.</p>
+          <span class="label">Now &amp; Next</span>
+          <h2 class="sec-title">What I'm building toward</h2>
         </div>
 
         <div class="story-grid">
@@ -568,20 +719,8 @@
             </div>
             <ul class="bullets">
               <li><span class="dot"></span><span>Building analytics + optimization projects that ship.</span></li>
-              <li><span class="dot"></span><span>Improving ML/AI fundamentals and evaluation discipline.</span></li>
+              <li><span class="dot"></span><span>Deepening ML/AI fundamentals and evaluation discipline.</span></li>
               <li><span class="dot"></span><span>Exploring quant finance via simulation + market projects.</span></li>
-            </ul>
-          </div>
-
-          <div class="card story-card">
-            <div class="story-title">
-              <h3>Previously</h3>
-              <span class="chip">Industry</span>
-            </div>
-            <ul class="bullets">
-              <li><span class="dot"></span><span>Revenue analytics: forecasting, pricing, and capacity decisions.</span></li>
-              <li><span class="dot"></span><span>BI automation: ERP → dashboards → workflows.</span></li>
-              <li><span class="dot"></span><span>Always measured outcomes (accuracy, lift, time saved).</span></li>
             </ul>
           </div>
 
@@ -591,18 +730,16 @@
               <span class="chip">Summer 2026</span>
             </div>
             <ul class="bullets">
-              <li><span class="dot"></span><span>Internships/co-ops in analytics, OR, product/ops, or data.</span></li>
-              <li><span class="dot"></span><span>Open to markets/quant roles where I can learn fast + contribute.</span></li>
-              <li><span class="dot"></span><span>Keep building a “project ladder” toward stronger quant intuition.</span></li>
+              <li><span class="dot"></span><span>Internships / co-ops in analytics, OR, product/ops, or data.</span></li>
+              <li><span class="dot"></span><span>Open to markets/quant roles where I can learn fast and contribute.</span></li>
+              <li><span class="dot"></span><span>Keep building a project ladder toward stronger quant intuition.</span></li>
             </ul>
           </div>
         </div>
 
-        <!-- Role-fit (infographic “where I fit”) -->
-        <div style="margin-top:2rem;">
-          <h2 class="sec-title" style="font-size:1.25rem;">Where I fit best</h2>
-          <p class="sec-sub" style="margin-bottom:0;">Pick the card that matches the role you’re hiring for.</p>
-
+        <div style="margin-top:2.5rem;">
+          <h2 class="sec-title" style="font-size:1.25rem; margin-bottom:.3rem;">Where I fit best</h2>
+          <p class="sec-sub" style="margin-bottom:0;">Pick the card that matches the role you're hiring for.</p>
           <div class="role-grid">
             <div class="card role">
               <h3>Analytics / Data</h3>
@@ -630,7 +767,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -641,10 +777,9 @@
       <div class="container">
         <div class="section-head">
           <span class="label">Projects</span>
-          <h2 class="sec-title">Built things, not paragraphs</h2>
-          <p class="sec-sub">One-line what it is, one-line what changed. That’s it.</p>
+          <h2 class="sec-title">Built things, not just paragraphs</h2>
+          <p class="sec-sub">One-line what it is. One-line what changed.</p>
         </div>
-
         <div class="proj-grid">
 
           <div class="card proj">
@@ -658,12 +793,8 @@
                 <a class="plink" href="mailto:srahma20@asu.edu?subject=Autonomous%20AI%20Agent%20Demo%20Request">Request demo</a>
               </div>
             </div>
-            <div class="proj-one">
-              Agent workflow for multi-step queries with iteration + failure analysis.
-            </div>
-            <div class="proj-outcome">
-              ✅ Focus: tool-use reliability · eval discipline · iteration
-            </div>
+            <div class="proj-one">Agent workflow for multi-step queries with iteration + failure analysis.</div>
+            <div class="proj-outcome">✅ Focus: tool-use reliability · eval discipline · iteration</div>
           </div>
 
           <div class="card proj">
@@ -677,12 +808,8 @@
                 <a class="plink" href="https://shamsadr.github.io/monte-carlo-sim" target="_blank" rel="noopener noreferrer">Live</a>
               </div>
             </div>
-            <div class="proj-one">
-              Random sampling + GBM stock simulation; validated simulated mean vs analytical expectation.
-            </div>
-            <div class="proj-outcome">
-              ✅ Result: mean within <strong>0.16%</strong> across 50,000 paths
-            </div>
+            <div class="proj-one">Random sampling + GBM stock simulation; validated simulated mean vs analytical expectation.</div>
+            <div class="proj-outcome">✅ Result: mean within <strong>0.16%</strong> across 50,000 paths</div>
           </div>
 
           <div class="card proj">
@@ -695,30 +822,22 @@
                 <span class="plink disabled" title="Write-up available on request">On request</span>
               </div>
             </div>
-            <div class="proj-one">
-              Placement optimization incorporating demand + cost factors.
-            </div>
-            <div class="proj-outcome">
-              ✅ Improvement: +15% placement precision (project claim)
-            </div>
+            <div class="proj-one">Placement optimization incorporating demand + cost factors via Data Envelopment Analysis.</div>
+            <div class="proj-outcome">✅ Improvement: +15% placement precision</div>
           </div>
 
           <div class="card proj">
             <div class="proj-head">
               <div>
-                <h3 class="proj-name">📋 QA Dashboard (Hupp)</h3>
+                <h3 class="proj-name">📋 QA Dashboard — Hupp Aerospace</h3>
                 <div class="proj-meta">Tableau · ERP integration · automation</div>
               </div>
               <div class="proj-links">
                 <span class="plink disabled" title="Case details available on request">On request</span>
               </div>
             </div>
-            <div class="proj-one">
-              Real-time QA visibility and reduced reporting overhead through automation.
-            </div>
-            <div class="proj-outcome">
-              ✅ Outcome: +25% visibility · −30% overhead (project claim)
-            </div>
+            <div class="proj-one">Real-time QA visibility and reduced reporting overhead through ERP + BI integration.</div>
+            <div class="proj-outcome">✅ Outcome: +25% visibility · −30% overhead</div>
           </div>
 
         </div>
@@ -733,23 +852,37 @@
         <div class="section-head">
           <span class="label">Skills</span>
           <h2 class="sec-title">Tools I actually use</h2>
-          <p class="sec-sub">Grouped for scanning (not a giant word wall).</p>
+          <p class="sec-sub">Grouped for scanning.</p>
         </div>
-
         <div class="skills-wrap">
           <div class="card skill">
-            <h3>Core</h3>
+            <h3>Languages</h3>
             <div class="tag-row">
-              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Tableau</span>
-              <span class="tag">Excel (Advanced)</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span>
+              <span class="tag">SAS</span><span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="card skill">
+            <h3>BI &amp; Visualization</h3>
+            <div class="tag-row">
+              <span class="tag">Tableau</span><span class="tag">Power BI</span>
+              <span class="tag">Excel (Advanced)</span><span class="tag">Pandas</span>
+              <span class="tag">NumPy</span><span class="tag">Matplotlib</span>
             </div>
           </div>
           <div class="card skill">
             <h3>Methods</h3>
             <div class="tag-row">
-              <span class="tag">Demand forecasting</span><span class="tag">Stochastic modeling</span>
+              <span class="tag">Demand Forecasting</span><span class="tag">Stochastic Modeling</span>
               <span class="tag">Simulation</span><span class="tag">Operations Research</span>
-              <span class="tag">Financial modeling</span>
+              <span class="tag">Financial Modeling</span><span class="tag">DEA</span>
+            </div>
+          </div>
+          <div class="card skill">
+            <h3>AI &amp; Automation</h3>
+            <div class="tag-row">
+              <span class="tag">Langflow</span><span class="tag">AI Agent Architectures</span>
+              <span class="tag">ReAct</span><span class="tag">ERP Integration</span>
             </div>
           </div>
         </div>
@@ -763,10 +896,9 @@
       <div class="container">
         <div class="section-head">
           <span class="label">Personal</span>
-          <h2 class="sec-title">What I’m like outside work</h2>
-          <p class="sec-sub">Still human. Still curious. Still consistent themes (strategy + systems).</p>
+          <h2 class="sec-title">Outside of work</h2>
+          <p class="sec-sub">Consistent theme: strategy + systems.</p>
         </div>
-
         <div class="interest-grid">
           <div class="card interest">
             <div class="ico">🏎️</div>
@@ -799,12 +931,11 @@
       <div class="container">
         <div class="contact-box">
           <span class="label" style="display:block; text-align:center;">Get in touch</span>
-          <h2 class="sec-title" style="margin-bottom:.25rem;">Let’s talk.</h2>
+          <h2 class="sec-title" style="margin-bottom:.25rem;">Let's talk.</h2>
           <p>
-            Open to <strong>Summer 2026 internships & co-ops</strong>. Best fit: analytics, OR/optimization, product/ops, data.
+            Open to <strong>Summer 2026 internships &amp; co-ops</strong>. Best fit: analytics, OR/optimization, product/ops, data.
             Also open to markets/quant roles that are a strong learning + impact match.
           </p>
-
           <div class="contact-links">
             <a class="c-link" href="mailto:srahma20@asu.edu">✉️ srahma20@asu.edu</a>
             <a class="c-link" href="https://linkedin.com/in/shamsadr" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
@@ -823,9 +954,24 @@
   </main>
 
   <script>
+    // Nav scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile hamburger
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   </script>
 </body>
